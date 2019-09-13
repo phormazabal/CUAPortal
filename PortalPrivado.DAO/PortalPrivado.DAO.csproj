@@ -34,5 +34,11 @@
     <Compile Include="PacienteDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PortalPrivado.BO\PortalPrivado.BO.csproj">
+      <Project>{2E3850E2-BED2-46F6-B2E9-1422FA6FFB9D}</Project>
+      <Name>PortalPrivado.BO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
