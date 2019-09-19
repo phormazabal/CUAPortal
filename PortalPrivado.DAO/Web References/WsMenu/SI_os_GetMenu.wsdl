@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:Clinicauandes.org.ish.GetMenuPortal" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_os_GetMenu" targetNamespace="urn:Clinicauandes.org.ish.GetMenuPortal" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_os_GetMenu" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:Clinicauandes.org.ish.GetMenuPortal" targetNamespace="urn:Clinicauandes.org.ish.GetMenuPortal" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_GetMenu" type="p1:DT_GetMenu" />
+      <xsd:element name="MT_r_GetMenu" type="p1:DT_r_GetMenu" />
+      <xsd:element name="MM_fault">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="standard" type="p1:ExchangeFaultData" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="DT_r_GetMenu">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">30e35b43d4d311e9a491000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="Menu">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">f02ca1b4d4ce11e9b69b8c04ba144d5c</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="Glosa" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8a998d20d4c211e988048c04ba144d5c</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="IdMenu" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8a998d21d4c211e99c8b8c04ba144d5c</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="URL" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8a998d22d4c211e9cdd48c04ba144d5c</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element name="Orden" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8a998d23d4c211e98a358c04ba144d5c</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" maxOccurs="unbounded" name="SubMenu">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8a9c05c9d4c211e9b69a8c04ba144d5c</xsd:appinfo>
+                  </xsd:annotation>
+                  <xsd:complexType>
+                    <xsd:sequence>
+                      <xsd:element name="IdSubMenu" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">8a9c05c5d4c211e981da8c04ba144d5c</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="GlosaSubMenu" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">8a9c05c6d4c211e98d488c04ba144d5c</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="URL" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">8a9c05c7d4c211e984ac8c04ba144d5c</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                      <xsd:element name="Orden" type="xsd:string">
+                        <xsd:annotation>
+                          <xsd:appinfo source="http://sap.com/xi/TextID">8a9c05c8d4c211e9879a8c04ba144d5c</xsd:appinfo>
+                        </xsd:annotation>
+                      </xsd:element>
+                    </xsd:sequence>
+                  </xsd:complexType>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_GetMenu">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">35fe368dd4d311e991b7000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="IdMenu" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ExchangeFaultData">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">2b0812d2d4d311e9b9ff000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="faultText" type="xsd:string" />
+          <xsd:element minOccurs="0" name="faultUrl" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="faultDetail" type="p1:ExchangeLogData" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ExchangeLogData">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">1c8ed383d4d311e99bfd000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="severity" type="xsd:string" />
+          <xsd:element name="text" type="xsd:string" />
+          <xsd:element minOccurs="0" name="url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="id" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_GetMenu">
+    <wsdl:documentation />
+    <wsdl:part name="MT_GetMenu" element="p1:MT_GetMenu" />
+  </wsdl:message>
+  <wsdl:message name="MT_r_GetMenu">
+    <wsdl:documentation />
+    <wsdl:part name="MT_r_GetMenu" element="p1:MT_r_GetMenu" />
+  </wsdl:message>
+  <wsdl:message name="MM_fault">
+    <wsdl:documentation />
+    <wsdl:part name="MM_fault" element="p1:MM_fault" />
+  </wsdl:message>
+  <wsdl:portType name="SI_os_GetMenu">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_os_GetMenu">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_os_GetMenu" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_GetMenu" />
+      <wsdl:output message="p1:MT_r_GetMenu" />
+      <wsdl:fault name="MM_fault" message="p1:MM_fault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_os_GetMenuBinding" type="p1:SI_os_GetMenu">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_os_GetMenu">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+      <wsdl:fault name="MM_fault">
+        <fault use="literal" name="MM_fault" namespace="" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_os_GetMenuService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_os_GetMenuBinding">
+      <address location="http://dcpiddev.clinicauandes.cl:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=SI_os_GetMenu&amp;interfaceNamespace=urn%3AClinicauandes.org.ish.GetMenuPortal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_os_GetMenuBinding">
+      <address location="https://dcpiddev.clinicauandes.cl:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=SI_os_GetMenu&amp;interfaceNamespace=urn%3AClinicauandes.org.ish.GetMenuPortal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
