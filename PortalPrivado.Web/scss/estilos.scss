@@ -1,0 +1,29 @@
+/*--Desarrollado por PABLO ABARCA T--*/
+// Librerias, Settings y Variables
+@import "lib/variables";
+@import "lib/mixins";
+
+// Elementos Base
+@import "base/fonts";
+@import "base/general";
+@import "base/botones";
+
+//Layout
+
+@import "layout/header";
+@import "layout/home";
+@import "layout/especialidades";
+@import "layout/noticias";
+@import "layout/centros";
+@import "layout/seguros";
+@import "layout/interiores";
+@import "layout/privado";
+@import "layout/footer";
+
+//Componentes
+@import "componentes/carrusel";
+@import "componentes/acordeon";
+@import "componentes/calendar";
+
+//Responsive
+@import "layout/responsive";

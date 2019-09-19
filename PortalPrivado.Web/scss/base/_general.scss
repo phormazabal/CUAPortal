@@ -1,0 +1,485 @@
+// main: ../estilos.scss
+body{
+    color: $color-gris;
+    font-weight: normal;
+    width: 100%;
+    max-width: 100%;
+    font-family: $font-1;
+    font-size: $basefontsize;
+    -webkit-font-smoothing: antialiased;
+}
+body,html{
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+body, .smooth-container { scroll-behavior: smooth }
+
+h1 { 
+  color: $color-negro;
+  font-size: 3.5em;
+  margin: 0 0 8px;
+}
+h2 {
+  color: $color-negro;
+  font-size: 2.5em;
+  font-weight: 900;
+  margin: 0 0 40px;
+}
+p{
+  font-size: 1em;
+  line-height: 1.5em;
+  margin-top: 0;
+  b{
+    font-weight: bold;
+  }
+  a {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+.clear{
+    clear: both;
+}
+
+.wow{
+    visibility: hidden;
+}
+.fadein {
+    opacity: 0;
+}
+
+ .hidden_a{
+    opacity: 0;
+ }
+
+.visible{
+    opacity: 1;
+}
+
+.wrapper{
+    position: relative;
+}
+.wrapper.wrapper-home{
+    padding-top: 148px;
+}
+
+.wrap{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 $wrap1;
+    @include respond-to(991px) { }
+    @include respond-to(640px) { padding: 0 $wrap2; }
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters > [class^="col-"],
+.row.no-gutters > [class*=" col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.row.row-small {
+  margin-right: -$space/2;
+  margin-left: -$space/2;
+}
+.row.row-small > [class^="col-"],
+.row.row-small > [class*=" col-"] {
+  padding-right: $space/2;
+  padding-left: $space/2;
+}
+.row.row-big {
+  margin-right: -50px;
+  margin-left: -50px;
+}
+.row.row-big > [class^="col-"],
+.row.row-big > [class*=" col-"] {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+.row.row-20 {
+  margin-right: -10px;
+  margin-left: -10px;
+}
+.row.row-20 > [class^="col-"],
+.row.row-20 > [class*=" col-"] {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+* {
+  outline: none;
+}
+
+a,button{
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: $color-gris;
+}
+
+a:hover {
+    color: $color-gris;
+    text-decoration: none;
+}
+
+h2.t-2 {
+  font-family: $font-2;
+  color: $color-negro;
+  font-size: 1.875em;
+  font-weight: bold;
+  text-align: center;
+  &:after {
+    content:"";
+    height: 2px;
+    width: 3em;
+    background: $color-verde;
+    display: block;
+    margin: .4em auto 1.5em;
+  }
+}
+h2.t-2b {
+  font-size: 1.9em;
+  color: $color-negro;
+  font-family: $font-2;
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: .6em;
+  img {
+    width: 1em;
+    vertical-align: middle;
+    margin-right: 2px;
+  }
+  &.blanco {
+    color: #fff;
+  }
+  &.gris {
+    color: #707070;
+  }
+}
+
+h3.t-3 {
+  font-family: $font-2;
+  color: $color-negro;
+  font-size: 1.66em;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: .4em;
+  margin-top: 0;
+  &.con-b {
+    &:after {
+      height: 1px;
+      width: 2.5em;
+      content:"";
+      display:block;
+      background: $color-negro;
+      margin-top: .4em;
+      margin-bottom: .8em;
+    }
+  }
+  &.blanco {
+    color: #fff;
+  }
+}
+
+.s-block {
+  padding-top: 4.58em;
+  padding-bottom: 4.58em;
+  @include respond-to(991px) {
+    &.ms-block {
+      padding-top: 0;
+    }
+  }
+  @include respond-to(640px) {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    .btn {
+      height: 50px;
+      font-size: 18px;
+    }
+  }
+  @include respond-to(480px) {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+.bg-gris {
+  background: $bg-gris;
+}
+.bg-verde {
+  background: #579244;
+}
+.bg-verde2 {
+  background: $color-verde2;
+}
+.bg-azul {
+  background: $color-azul;
+}
+.bg-rosa {
+  background: $color-rosa;
+}
+.bg-burdeo {
+  background: $color-burdeo;
+}
+
+.p-1 {
+  padding-top: $p-1;
+  padding-bottom: $p-1;
+}
+.p-2 {
+  padding-top: $p-2;
+  padding-bottom: $p-2;
+}
+
+.pt-1 {
+  padding-top: $p-1;
+}
+.pt-2 {
+  padding-top: $p-2;
+}
+
+.pb-1 {
+  padding-bottom: $p-1 !important;
+}
+.pb-2 {
+  padding-bottom: $p-2 !important;
+}
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.flex{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.flex-stretch{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.flex-between{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.flex-between-top{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+          -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start;
+}
+.flex-center{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.flex-center-column{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+}
+.flex-top{
+  -webkit-box-align: start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+}
+.flex-top2{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+    -ms-flex-align: start;
+        align-items: flex-start;
+}
+.flex-left{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.flex-right{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+     flex-wrap: wrap;
+}
+
+.w-video {
+  img {
+    width: 100%;
+  }
+}
+a.volver {
+  font-size: .875em;
+  color: $color-verde;
+  text-transform: uppercase;
+  display: block;
+  margin-top: -2.5em;
+  margin-bottom: 2em;
+  font-weight: bold;
+  img {
+    width: 2.2em;
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &.volver-2 {
+    color: #fff;
+    margin: 0 0 1em;
+  }
+  @include respond-to(480px){
+    margin-top: 0;
+    margin-bottom: 2em;
+  }
+}
+
+.b-mobile {
+  display: none;
+  @include respond-to(768px){
+    display: block;
+  }
+}
+.b-desktop {
+  @include respond-to(768px){
+    display: none;
+  }
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-40 {
+  margin-top: 2em;
+}
+.mb-20 {
+  margin-bottom: 1em;
+}
+.mb-40 {
+  margin-bottom: 2em;
+}
+.mb-50 {
+  margin-bottom: 2.8em;
+}
+
+.botones {
+  .btn {
+    margin-bottom: 1.2em;
+  }
+  @include respond-to(480px){
+    .btn {
+      height: 50px;
+      font-size: 14px;
+      padding: 14px 20px;
+    }
+  }
+}
+
+.img-full {
+  width: 100%;
+  margin-bottom: .5em;
+}
+.t-small {
+  p {
+    font-size: .917em;
+    &.small {
+      font-size: .75em;
+      margin-bottom: .5em;
+    }
+  }
+}
+.texto-esp {
+  h5 {
+    color: $color-gris;
+    margin: 2em 0 .2em;
+    font-size: 1em;
+  }
+  p {
+    line-height: 1.6em;
+    a {
+      color: $color-verde;
+      text-decoration: underline;
+    }
+  }
+  ul {
+    line-height: 1.5em;
+  }
+  @include respond-to(640px){
+  }
+}
+
+a.ver-mas {
+  font-size: .83em;
+  color: $color-verde;
+  margin: 2em 0;
+  display: block;
+  font-weight: bold;
+  img {
+    width: 2.2em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: .5em;
+  }
+}

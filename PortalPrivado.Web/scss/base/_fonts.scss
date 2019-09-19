@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'BellGothicStd';
+    src: url('fonts/BellGothicStd-Black.eot?#iefix') format('embedded-opentype'),  
+         url('fonts/BellGothicStd-Black.otf')  format('opentype'),
+         url('fonts/BellGothicStd-Black.woff') format('woff'), 
+         url('fonts/BellGothicStd-Black.ttf')  format('truetype'), 
+         url('fonts/BellGothicStd-Black.svg#BellGothicStd-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  
+@font-face {
+    font-family: 'BellGothicStd';
+    src: url('fonts/BellGothicStd-Bold.eot?#iefix') format('embedded-opentype'),  
+         url('fonts/BellGothicStd-Bold.otf')  format('opentype'),
+         url('fonts/BellGothicStd-Bold.woff') format('woff'), 
+         url('fonts/BellGothicStd-Bold.ttf')  format('truetype'), 
+         url('fonts/BellGothicStd-Bold.svg#BellGothicStd-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Roboto Condensed';
+    src: url('fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+         url('fonts/RobotoCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('fonts/RobotoCondensed-Italic.woff2') format('woff2'),
+         url('fonts/RobotoCondensed-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('fonts/RobotoCondensed-Bold.woff2') format('woff2'),
+        url('fonts/RobotoCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    src: url('fonts/RobotoCondensed-Light.woff2') format('woff2'),
+        url('fonts/RobotoCondensed-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Black.woff2') format('woff2'),
+        url('fonts/Roboto-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Bold.woff2') format('woff2'),
+        url('fonts/Roboto-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Medium.woff2') format('woff2'),
+        url('fonts/Roboto-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.woff2') format('woff2'),
+        url('fonts/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

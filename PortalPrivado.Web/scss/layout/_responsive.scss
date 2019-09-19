@@ -1,0 +1,212 @@
+@media (max-width: 1550px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .wrap {
+        padding: 0 $wrap2;
+    }
+}
+
+@media (max-width: 991px) {
+    .fw-991 {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 640px) {
+
+}
+
+@media (max-width: 480px) {
+  .wrap {
+      padding: 0 $wrap3;
+  }
+  .box-reserva .form-group button {
+    margin-bottom: 1.5em;
+    height: 45px;
+    padding: .2em;
+    font-size: 18px;
+  }
+  .box-reserva .form-group input.f-input {
+    font-size: 16px;
+    height: 52px;
+    padding: 5px 10px;
+  }
+  .especialidades {
+    background-image: none;
+    padding: 0 20px 20px;
+    h3 {
+      background: #558815;
+      padding: 17px 20px 15px;
+      margin: 0 -20px 10px;
+      font-size: 26px;
+    }
+  }
+  .carrusel-contratar .tns-controls button {
+    display: none;
+  }
+  .carrusel.verde.carrusel-contratar {
+    padding: 0 40px;
+  }
+  .carrusel.c-mobile {
+    padding: 0 20px;
+  }
+  .carrusel.c-mobile .tns-controls button {
+    display: none;
+  }
+  .carrusel.c-mobile .tns-ovh {
+    overflow: visible;
+  }
+  .box-con {
+    height: 244px;
+    position: relative;
+    span {
+      display: block;
+      color: #fff;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      bottom: 30px;
+      text-align: center;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      img {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+  .box-extension .texto a {
+    margin-top: 1em;
+    height: 48px;
+    padding: 14px 10px;
+    font-size: 14px;
+  }
+  .campana .texto-camp h3 {
+    font-size: 26px;
+    line-height: 28px;
+  }
+  .campana .texto-camp a {
+    font-size: 16px;
+    height: 48px;
+  }
+  .box-extension .categoria span {
+    font-size: 12px;
+  }
+  footer .w-footer ul {
+    column-count: 1;
+  }
+
+  footer .footer-bottom .newsletter .form-group {
+    background: none;
+    border: none;
+    input {
+      background: #2B363E;
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: 1px solid #616A71;
+      width: 100%;
+      height: 52px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    button {
+      position: relative;
+      bottom: auto;
+      width: 100%;
+      font-size: 16px;
+      height: 52px;
+    }
+  }
+  footer .footer-bottom .links a {
+    font-size: 16px;
+  }
+  footer .footer-bottom .redes-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  footer .footer-bottom .redes-footer a {
+      width: 3em;
+      height: 3em;
+      font-size: 20px;
+      line-height: 3em;
+  }
+  .s-block .t-esp .btn {
+    height: 52px;
+    font-size: 18px;
+    padding: 12px 10px;
+  }
+  .grid-esp .box-esp .texto-esp .botones a {
+    margin: 0 0px 10px;
+    width: 100%;
+    padding-top: 9px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .titulo-doctor h2 {
+    font-size: 26px;
+  }
+  .reserva-hora {
+    text-align: center;
+  }
+  .reserva-hora .btn {
+    font-size: 55px;
+    font-size: 18px;
+  }
+  .busqueda-patologias .form-group{
+    input {
+      height: 50px;
+    }
+    button {
+      height: 50px;
+      font-size: 18px;
+    }
+  }
+  .res-glosario .lista-enf a {
+    width: 100%;
+  }
+  .res-glosario .btn {
+    height: 46px;
+    font-size: 18px;
+    padding-top: 10px;
+  }
+  .box-noticia .texto-noticia {
+    padding: 15px 10px;
+  }
+  .box-not2 .texto-noticia p {
+    display: none;
+  }
+  .box-not2 .texto-noticia a.ver-mas {
+    display: none;
+  }
+  .item-leido h4 {
+    font-size: 16px;
+  }
+  .box-news .form-group button.btn {
+    height: 46px;
+    font-size: 16px;
+    padding-top: 10px;
+  }
+  .not-detalle .det-noticia h1 {
+    font-size: 28px;
+  }
+  .not-detalle aside {
+    padding: 1.5em 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .box-con {
+    height: 210px;
+  }
+}

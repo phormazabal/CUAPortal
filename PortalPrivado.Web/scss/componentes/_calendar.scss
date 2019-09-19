@@ -1,0 +1,137 @@
+
+/*---CALENDARIO EVENTO---*/
+#calendar{
+    padding: 0;
+  }
+  .box-res table tr th.fc-day-header {
+    padding: .6em .4em;
+    margin-bottom: 10px;
+  }
+  .box-res #calendar table tr:last-child td {
+    padding: 0;
+  }
+  .s-calendario{
+    table {
+      border-collapse: separate;
+      border-spacing: .3em;
+    }
+  }
+  .fc-toolbar.fc-header-toolbar {
+    margin-bottom: .6em;
+  }
+  .fc-state-default {
+    background: none;
+    font-family: 'Roboto';
+    border: none;
+    box-shadow: none;
+  }
+  .fc-icon {
+    font-family: 'Roboto';
+    font-size: 1.5em;
+  }
+  .fc-header-toolbar h2{
+    color: $color-verde;
+    font-size: 1em;
+    font-weight: bold;
+    vertical-align: middle;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    display: inline-block;
+    padding: 0 1em;
+  }
+  * {
+    outline: none !important;
+  }
+  .fc-header-toolbar button.fc-button{
+    color:$color-gris;
+    font-size: .8em;
+    border: 2px solid #fff;
+    width: 1.9em;
+    height: 1.5em;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 0px;
+    padding: 0;
+    display: inline-block;
+  }
+  .fc button .fc-icon{
+    margin: 0 auto;
+  }
+  .fc-unthemed td.fc-day, .fc-unthemed th{
+    border: none;
+  }
+  .fc-head-container.fc-widget-header,
+  .fc-body .fc-widget-content 
+  {
+    border: none;
+  }
+  .fc-body .fc-widget-content {
+    background: #F5F7F8;
+  }
+  .fc-unthemed td.fc-day-top,.fc-unthemed tbody,.fc-unthemed thead{
+    border: 0;
+  }
+  
+  .fc-day-header{
+    background: #fff;
+  }
+  
+  .fc-day-header span{
+    font-size: .9em;
+    font-weight: bold;
+    color:#2E2E2E;
+    text-transform: capitalize;
+  }
+  .fc-day-header span{
+    visibility: hidden;
+    display: block;
+    width: 10px;
+    margin: 0 auto;
+    padding: .2em;
+  }
+  .fc-day-header span:first-letter{
+    visibility: visible;
+  }
+
+  .fc-day{
+
+  }
+  .fc-day.fc-sun,
+  .fc-day.fc-sat{
+    background: transparent;
+  }
+
+  .fc-day-top.fc-other-month.fc-past,
+  .fc-day.fc-widget-content.fc-other-month
+   {
+    visibility: hidden;
+  }
+  .fc-basic-view .fc-day-number{
+    color: $color-gris;
+    font-size: .96em;
+    font-weight: normal;
+    line-height: 1em;
+    padding: 15px 0px;
+    width: 100%;
+    text-align: center;
+  }
+  .fc-basic-view .fc-body .fc-row{
+    max-height: 2.2em;
+    min-height: 2.2em;
+  }
+  .fc-head .fc-row:first-child table {
+    border-spacing: .3em 0;
+  }
+  .fc-event, .fc-event-dot{
+    background: #00B5AD;
+    color: $color-gris !important;
+    padding: 1px 6px 3px;
+    border: none;
+  }
+  .fc-unthemed td.fc-today{
+    border: none;
+  }
+  .box-res table .fc-head tr:last-child td{
+    padding: 0;
+  }
+  /*---FIN CALENDARIO EVENTO---*/

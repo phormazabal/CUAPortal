@@ -1,0 +1,250 @@
+.grid-centros {
+  padding: 15px 0;
+  .box-centro {
+    position: relative;
+    margin-bottom: 55px;
+    figure {
+      img {
+        width: 100%;
+      }
+    }
+    .texto-centro {
+      @include flex-left;
+      background: #F5F7F8;
+      padding: 1.1em 1.1em 2.2em;
+      border-left: .5em solid #CBD0D3;
+      width: 90%;
+      position: absolute;
+      bottom: -30px;
+      figure {
+        margin-right: 10px;
+        img {
+          width: 4.1em;
+        }
+      }
+      h4 {
+        margin: 0;
+        font-weight: normal;
+        a {
+          color: #90969B;
+          font-size: 1.1em;
+          font-family: $font-3;
+        }
+      }
+      a.ver-mas {
+        position: absolute;
+        right: 20px;
+        bottom: 0px;
+        font-size: .66em;
+        text-transform: uppercase;
+        color: $color-gris;
+        img {
+          width: 2.2em;
+          vertical-align: middle;
+          display: inline-block;
+          margin-left: 5px;
+        }
+        &:hover {
+          transform: translate(-10px,0px);
+        }
+      }
+    }
+    &.box-unidad {
+      .texto-centro {
+        min-height: 6em;
+        h4 {
+          font-size: 1em;
+          font-family: $font-1;
+          font-weight: bold;
+          a {
+            font-family: $font-1;
+            color: $color-gris;
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+  @include respond-to(480px){
+    .box-centro {
+      .texto-centro {
+        figure {
+          img {
+            width: 3em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.box-urgencia {
+  background: #90969B;
+  @include flex-center;
+  padding: 2em 0;
+  margin: 0 0 1.5em;
+  .urgencia-1 {
+    @include flex-left;
+    border-right: 1px solid #fff;
+    padding-right: 2em;
+    margin-right: 2em;
+    figure {
+      margin-right: 20px;
+      img {
+        width: 7em;
+      }
+    }
+    h4 {
+      font-size: 1.875em;
+      color: #fff;
+      font-family: $font-2;
+      font-weight: 900;
+      margin: 0 0 -5px;
+    }
+    h5 {
+      font-size: 1.25em;
+      color: #fff;
+      font-family: $font-3;
+      margin: 0;
+    }
+  }
+  .urgencia-2 {
+    h6 {
+      font-size: 1.25em;
+      color: #fff;
+      font-family: $font-3;
+      font-weight: 500;
+      margin: 0;
+    }
+    p {
+      margin: 0;
+      font-size: .9em;
+      color: #fff;
+
+      a {
+        color: #fff;
+        text-decoration: underline;
+      }
+    }
+  }
+  @include respond-to(991px){
+    flex-wrap: wrap;
+    text-align: center;
+
+    .urgencia-1 {
+      width: 100%;
+      margin-bottom: 3em;
+      margin: 0 auto;
+      border: none;
+      padding: 0;
+      @include flex-center;
+    }
+    .urgencia-2 {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+  @include respond-to(480px){
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 20px 15px;
+
+    .urgencia-1 {
+      flex-direction: column;
+      figure {
+        margin-right: 0;
+        margin-bottom: 10px;
+        img {
+          width: 4em;
+        }
+      }
+      h4 {
+        font-size: 1.5em;
+      }
+    }
+    .urgencia-2 {
+    }
+  }
+}
+
+.banner-mat {
+  background: #EAEFF4;
+  @include flex-left;
+  figure {
+    width: 45%;
+    img {
+      width: 100%;
+    }
+  }
+  .texto-mat {
+    padding: 2em 8em 2em 3.5em;
+    h4 {
+      color: $color-verde;
+      font-size: 1.4em;
+      font-family: $font-2;
+      font-weight: bold;
+      margin-bottom: 20px;
+      margin-top: 0;
+      &:after {
+        width: 4.7em;
+        height: 2px;
+        background: $color-gris;
+        content:"";
+        display:block;
+        margin: 10px 0;
+      }
+    }
+    p {
+      color: $color-gris-light;
+      font-weight: bold;
+      font-size: 1.1em;
+      font-family: $font-3;
+      margin: 0 0 20px;
+    }
+    a {
+      font-size: .8em;
+      color: $color-verde;
+      font-weight: bold;
+      img {
+        width: 2.2em;
+        vertical-align: middle;
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+    a.btn {
+      color: #fff;
+      padding: 0.8em 4em;
+    }
+  }
+  @include respond-to(768px) {
+    flex-wrap: wrap;
+    figure {
+      width: 100%;
+    }
+    .texto-mat {
+      padding: 2em;
+    }
+  }
+}
+
+.item-nacido {
+  figure {
+    margin-bottom: 2em;
+    img {
+      width: 100%;
+    }
+  }
+  .texto {
+    padding-left: 10px;
+    h4 {
+      color: $color-negro;
+      font-size: 1.87em;
+      margin: 0 0 .4em;
+      font-family: $font-2;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}

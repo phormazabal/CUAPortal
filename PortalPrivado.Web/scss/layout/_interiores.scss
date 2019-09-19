@@ -1,0 +1,345 @@
+.banner-2 {
+  .texto-banner {
+    background: $color-gris;
+    padding: 3.2em 2em 2em;
+    border-left: .6em solid $color-verde;
+    position: absolute;
+    left: $wrap1;
+    bottom: -2em;
+    width: 45%;
+    h4 {
+      font-size: 1.875em;
+      color: #fff;
+      font-family: $font-2;
+      margin: 0 0 .5em;
+    }
+    p {
+      color: #fff;
+    }
+  }
+  @include respond-to(1200px){
+    .texto-banner {
+      width: auto;
+      left: $wrap2;
+      right: $wrap2;
+    }
+  }
+  @include respond-to(991px){
+    .texto-banner {
+      position: relative;
+      left: 0;
+      right: 0;
+      bottom: auto;
+    }
+  }
+  @include respond-to(480px){
+    .texto-banner {
+      padding: 2em 1.8em;
+    }
+  }
+}
+
+.box-equipo {
+  figure {
+    img {
+      width: 100%;
+      border-bottom: .5em solid $color-verde;
+      margin-bottom: 1.4em;
+    }
+  }
+  h4 {
+    color: $color-verde;
+    font-size: 1em;
+    margin: 0 0 .8em;
+    font-weight: bold;
+    font-family: $font-3;
+    &:after {
+      content:"";
+      background: #333F48;
+      width: 4em;
+      height: 1px;
+      display: block;
+      margin: .5em 0;
+    }
+  }
+  p {
+    font-size: .91em;
+    color: #707070;
+    font-family: $font-3;
+    a {
+      color: $color-verde;
+    }
+  }
+}
+.row-small {
+  .box-equipo {
+    margin-bottom: 2.4em;
+  }
+}
+
+.s-interior {
+  figure {
+    margin-bottom: 2em;
+    img {
+      width: 100%;
+    }
+    &.f-l {
+      float: left;
+      width: 50%;
+      padding-right: 1em;
+    }
+  }
+  h5 {
+    font-size: 1.083em;
+    color: $color-negro;
+    font-weight: bold;
+    font-family: $font-3;
+    margin-bottom: 1em;
+  }
+  p {
+    font-family: $font-3;
+    font-size: .917em;
+    line-height: 1.8em;
+    margin-bottom: 2em;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 2em;
+    li {
+      font-family: $font-3;
+      font-size: .917em;
+      line-height: 1.8em;
+      margin-bottom: 0em; 
+      position: relative;
+      padding-left: .8em;
+      &:before {
+        content:"";
+        width: .37em;
+        height: .37em;
+        border-radius: 50%;
+        background: $color-verde;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: .65em;
+      }   
+    }
+  }
+}
+
+.box-preg {
+  h3 {
+    font-family: $font-3;
+    font-size: 1em;
+    font-weight: 900;
+    color: $color-verde;
+    background: #333F48;
+    padding: .8em;
+    border-left: .6em solid $color-verde;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: .5em;
+      width: 1.6em;
+    }
+  }
+  .ac-default .item-ac button {
+    padding: 1em 3.5em 1em 1em;
+  }
+  .ac-default .item-ac button:after {
+    top: 29%;
+    right: 15px;
+  }
+  a.ver-mas {
+    font-size: .83em;
+    color: $color-verde;
+    margin: 2em 0;
+    display: block;
+    img {
+      width: 2.2em;
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: .5em;
+    }
+  }
+}
+.ver-mas.ver-block {
+  font-size: .83em;
+  color: $color-verde;
+  font-weight: bold;
+  display: block;
+  margin: 1.2em 0 1.5em;
+  img {
+    display: inline-block;
+    margin-left: .5em;
+    vertical-align: middle;
+    width: 2.2em;
+  }
+}
+
+.bloque-prensa {
+  margin-bottom: 2.5em;
+}
+.boletin {
+  display: block;
+  font-size: 1em;
+  color: $color-verde;
+  padding: .6em 0;
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .8em;
+    width: 3.75em;
+  }
+}
+
+.box-widget.b-2 {
+  margin-bottom: 3em;
+}
+
+.a-link {
+  background: #F5F7F8;
+  padding: 1em 3em 1em 1em;
+  border: none;
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 1em;
+  i {
+    color: $color-verde;
+    position: absolute;
+    right: 1em;
+  }
+}
+
+aside.aside-m {
+  margin-top: 2.9em;
+}
+
+.box-ins-charlas {
+  background: $color-verde;
+  padding: 1.5em;
+  h3 {
+    margin: 0 0 1em;
+    font-size: 1.66em;
+    color: #fff;
+    font-family: $font-2;
+    font-weight: bold;
+    &:after {
+      background: #fff;
+      height: 2px;
+      content:"";
+      width: 3em;
+      display: block;
+      margin-top: .4em;
+    }
+  }
+
+  .box-charla-ins {
+    background: #fff;
+    padding: 1em .8em;
+    position: relative;
+    margin-bottom: 1.5em;
+
+    .cerrar-box-charla {
+      color: #579244;
+      position: absolute;
+      top: -.3em;
+      right: -.3em;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+
+    h4 {
+      margin: 0 0 2em;
+      color: #707070;
+      font-size: .917em;
+      font-weight: bold;
+      position: relative;
+      padding-left: .8em;
+      i {
+        color: $color-verde;
+        font-size: .8em;
+        position: absolute;
+        left: 0;
+        top: .25em;
+      }
+    }
+    .item {
+      color: #8B8B8B;
+      font-size: .75em;
+      font-weight: bold;
+      letter-spacing: .2em;
+      margin-bottom: .5em;
+      i {
+        font-size: 1.2em;
+        color: $color-verde;
+        width: 1em;
+      }
+    }
+  }
+}
+
+.buscador-med {
+  width: 95%;
+  border: 1px solid $color-gris;
+  @include flex-between;
+  margin-bottom: 1.5em;
+  padding: .2em;
+  border-radius: .3em;
+  input {
+    flex-grow: 1;
+    padding: .3em .8em;
+    color: #90969B;
+    border: none;
+  }
+  button {
+    width: 10.5em;
+    height: 2.8em;
+    font-size: .917em;
+  }
+  @include respond-to(480px) {
+    border: none;
+    width: 100%;
+    display: block;
+    input {
+      border: 1px solid $color-gris;
+      height: 50px;
+      width: 100%;
+      border-radius: .3em;
+      margin-bottom: .5em;
+    }
+    button {
+      width: 100%;
+    }
+  }
+}
+
+p.color-verde {
+  b {
+    color: $color-verde;
+  }
+}
+
+.box-boletin {
+  margin-bottom: 2em;
+  h5 {
+    color: #616A71;
+    font-weight: bold;
+    font-size: 1.167em;
+    margin: 0 0 .5em;
+  }
+  figure {
+    margin-bottom: .4em;
+    img {
+      width: 100%;
+    }
+  }
+  a.btn {
+    font-size: .83em;
+    width: 90%;
+  }
+}

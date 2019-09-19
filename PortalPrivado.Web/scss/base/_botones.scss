@@ -1,0 +1,80 @@
+// main: ../estilos.scss
+.btn {
+  font-size: 0.75em;
+  line-height: 1.4;
+  border-radius: 4px;
+  min-width: 10em;
+  padding:0.8em 2em;
+  display: inline-block;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  color: #fff;
+  border: none;
+  text-transform: uppercase;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  &.btn-verde {
+    background: $color-verde;
+    border:1px solid $color-verde;
+    &:hover {
+      background: #579244;
+    }
+  }
+  &.btn-verde-dark {
+    background: darken($color-verde,10%);
+    border-color: 1px solid $color-verde;
+    &:hover {
+      background: darken($color-verde,15%);
+    }
+  }
+  &.btn-amarillo {
+    background: $color-amarillo;
+    &:hover {
+      background: #FF703B;
+    }
+  }
+  &.btn-naranjo {
+    background: #EB8611;
+    &:hover {
+      background: #FF703B;
+    }
+  }
+  &.btn-blanco {
+    background: #fff;
+    color: $color-gris;
+    border: 1px solid $color-gris;
+    &:hover {
+    }
+  }
+  &.btn-borde-gris {
+    background: transparent;
+    color: $color-gris;
+    border: 1px solid $color-gris;
+    &:hover {
+      background: #eee;
+    }
+  }
+  &.btn-full {
+    width: 100%;
+  }
+  &.b-big {
+    font-size: .917em;
+    min-width: 280px;
+  }
+  @include respond-to(1550px){
+    padding: .8em 2em .7em;
+    &.b-big {
+      min-width: 220px;
+    }  
+  }
+  @include respond-to(480px){
+    min-width: 0;
+    &.b-big {
+      min-width: 0px;
+    }  
+  }
+}

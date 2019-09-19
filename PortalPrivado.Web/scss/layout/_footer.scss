@@ -1,0 +1,203 @@
+// main: ../estilos.scss
+footer {
+  background: #333F48;
+  padding: 2.9em 0 2em;
+
+  .logos-footer {
+    a {
+      img {
+        &.logo-2 {
+          width: 11.7em;
+        }
+        &.logo-acre {
+          width: 8em;
+          margin-left: 2em;
+        }
+      }
+    }
+  }
+  .w-footer {
+    h4 {
+      font-size: 1em;
+      color: $color-verde;
+      margin: 0 0 1em;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+      column-count: 2;
+      column-gap: 2em;
+      li {
+        position: relative;
+        padding-left: 15px;
+        margin-bottom: .5em;
+        &:before {
+          content:"";
+          width: 5px;
+          height: 5px;
+          background: #bbb;
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          left: 0;
+          top: 7px;
+        }
+        a {
+          color: #BBBBBB;
+          font-size: .9em;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+    p {
+      color: #BBBBBB;
+      font-size: .9em;
+      margin-bottom: 5px;
+      a {
+        color: $color-verde;
+        font-size: .9em;
+      }
+    }
+  }
+  .footer-bottom {
+    border-top: 1px solid $color-gris;
+    margin-top: 2em;
+    padding-top: 2.2em;
+    .newsletter {
+      @include flex-left;
+      label {
+        font-size: 1em;
+        color: $color-verde;
+        display: inline-block;
+        margin-right: 1em;
+      }
+      .form-group {
+        background: #2B363E;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid $color-gris;
+        input {
+          height: 100%;
+          color: #fff;
+          font-size: .9em;
+          padding: .4em;
+          background: #2B363E;
+          border: none;
+          width: 15em;
+          &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color:#C8CBCD;
+          }
+          &::-moz-placeholder { /* Firefox 19+ */
+            color: #C8CBCD;
+          }
+          &:-ms-input-placeholder { /* IE 10+ */
+            color: #C8CBCD;
+          }
+          &:-moz-placeholder { /* Firefox 18- */
+            color: #C8CBCD;
+          }
+        }
+        button {}
+      }
+    }
+    .links {
+      margin-left: -8em;
+      margin-top: 10px;
+      a {
+        display: block;
+        font-size: .75em;
+        color: $color-gris-light;
+        margin-bottom: 6px;
+        &:hover{
+          color: #fff;
+        }
+      }
+    }
+    .redes-footer {
+      a {
+        display: inline-block;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        background: #252E34;
+        color: #fff;
+        text-align: center;
+        line-height: 3em;
+        &:hover {
+          background: $color-verde;
+        }
+      }
+    }
+  }
+  @include respond-to(1200px){
+    .footer-bottom .links {
+      margin-left: 0;
+    }
+  }
+  @include respond-to(991px){
+    .flex-between-top{
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+    .logos-footer {
+      width: 100%;
+    }
+    .footer-bottom .newsletter {
+      width: 100%;
+      margin-bottom: 2em;
+    }
+    .links {
+      margin-right: 2em;
+      margin-left: 0;
+    }
+  }
+  @include respond-to(640px){
+    .logos-footer {
+      text-align: center;
+    }
+    .footer-bottom .newsletter {
+      width: 100%;
+      margin-bottom: 2em;
+      flex-wrap: wrap;
+      label {
+        width: 100%;
+        margin-bottom: 1em;
+      }
+      .form-group {
+        position: relative;
+        width: 100%;
+        button {
+          position: absolute;
+          right: 0;
+          bottom: 2px;
+        }
+      }
+    }
+    .links {
+      margin-bottom: 1em;
+    }
+  }
+  @include respond-to(640px){
+    padding-bottom: 80px;
+  }
+  @include respond-to(480px){
+    .logos-footer {
+      @include flex-between;
+      a {
+        img {
+          &.logo-2 {
+            width: 9em;
+            transform: scale(.8);
+            transform-origin: left;
+          }
+          &.logo-acre {
+            width: 6em;
+            margin-left: 1em;
+          }
+        }
+      }
+    }
+  }
+}
