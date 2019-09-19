@@ -16,8 +16,7 @@ namespace PortalPrivado.DAO
         /// <returns>Objeto con la información de un paciente</returns>
         public Paciente GetPaciente(String DocId)
         {
-            Paciente objPaciente = new Paciente();          
-            
+            Paciente objPaciente = new Paciente(); 
             return objPaciente;
 
         }
