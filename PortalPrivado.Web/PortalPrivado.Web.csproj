@@ -66,6 +66,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Inicio.aspx" />
     <Content Include="perfil.aspx" />
     <Content Include="Web.config" />
     <Content Include="Global.asax" />
@@ -292,6 +293,13 @@
     <Content Include="scss\base\_general.scss" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
     <Compile Include="perfil.aspx.cs">
       <DependentUpon>perfil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -308,6 +316,13 @@
     </Compile>
     <Compile Include="Portal.master.designer.cs">
       <DependentUpon>Portal.master</DependentUpon>
+    </Compile>
+    <Compile Include="PortalM.Master.cs">
+      <DependentUpon>PortalM.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PortalM.Master.designer.cs">
+      <DependentUpon>PortalM.Master</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -330,6 +345,7 @@
     <None Include="css\fonts\transfonter.org-20190801-192952\Roboto-Bold.woff2" />
     <None Include="images\.DS_Store" />
     <None Include="js\.DS_Store" />
+    <Content Include="PortalM.Master" />
     <None Include="scss\.DS_Store" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

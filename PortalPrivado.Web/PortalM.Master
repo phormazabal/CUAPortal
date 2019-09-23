@@ -1,4 +1,5 @@
-﻿<%@ Master Language="C#" Inherits="PortalPrivado.Web.Portal" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PortalM.master.cs" Inherits="PortalPrivado.Web.PortalM" %>
+
 <!DOCTYPE html>
 <html>
 <head runat="server">
@@ -362,3 +363,4 @@
 <script src="js/funciones-widget.js" defer></script>
 </body>
 </html>
+
