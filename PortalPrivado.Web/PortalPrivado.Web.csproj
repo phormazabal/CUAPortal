@@ -48,6 +48,12 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PortalPrivado.DAO">
+      <HintPath>..\PortalPrivado.DAO\bin\Debug\PortalPrivado.DAO.dll</HintPath>
+    </Reference>
+    <Reference Include="PortalPrivado.BO">
+      <HintPath>..\PortalPrivado.BO\bin\Debug\PortalPrivado.BO.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="perfil.aspx" />

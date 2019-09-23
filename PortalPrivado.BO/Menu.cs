@@ -11,7 +11,7 @@ namespace PortalPrivado.BO
         String _IdMenu;
         String _GlosaMenu;
         String _Url;
-
+        
         public string IdMenu { get => _IdMenu; set => _IdMenu = value; }
         public string GlosaMenu { get => _GlosaMenu; set => _GlosaMenu = value; }
         public string Url { get => _Url; set => _Url = value; }
