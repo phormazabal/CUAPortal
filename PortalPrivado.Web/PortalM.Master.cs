@@ -14,9 +14,9 @@ namespace PortalPrivado.Web
         {
             if (!Page.IsPostBack)
             {
-                MenuDao oMenudao = new MenuDao();
-                
-                RpMenu.DataSource = oMenudao.GetMenu();
+                MenuDao oMenudao = new MenuDao();               
+                List<BO.Menu> lstMenu = oMenudao.GetMenu();
+                RpMenu.DataSource = lstMenu;
                 RpMenu.DataBind();
             }
         }

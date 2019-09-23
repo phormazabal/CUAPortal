@@ -278,10 +278,11 @@
         <ul>
           <asp:Repeater ID="RpMenu" runat="server">
               <ItemTemplate>
-                  <li class="activo"><a href=""><%# Eval("GlosaMenu") %></a></li>
+                  <span class="activo"></span>
+                  <li ><a href='<%# Eval("Url") %>'><%# Eval("GlosaMenu") %></a></li>
               </ItemTemplate>
           </asp:Repeater>
-          <%--<li class="activo"><a href="#">Mi Perfil</a></li>
+          <%--<li class="activo"><a href="#">Mi 1Perfil</a></li>
           <li><a href="#">Personas vinculadas <i class="fas fa-chevron-right"></i></a></li>
           <li><a href="#">Reserva de horas</a></li>
           <li><a href="#">Reserva de horas dental</a></li>
