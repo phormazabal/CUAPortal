@@ -13,11 +13,13 @@ namespace PortalPrivado.DAO
             try
             {
                 List<Menu> lstMenu = new List<Menu>();
-                WsMenu.SI_os_GetMenuService service = new WsMenu.SI_os_GetMenuService();
+                WsMenu.SI_os_GetMenuService serv = new WsMenu.SI_os_GetMenuService();
                 WsMenu.DT_r_GetMenuMenu[] GetMenu;
                 WsMenu.DT_GetMenu dT_GetMenu = new WsMenu.DT_GetMenu();
-                service.Credentials = new NetworkCredential("phormazabal", "Clinica2019");
-                GetMenu = service.SI_os_GetMenu(dT_GetMenu);
+                dT_GetMenu.IdMenu = "";
+                serv.Credentials = new NetworkCredential("phormazabal", "Clinica2019");
+                GetMenu = serv.SI_os_GetMenu(dT_GetMenu);
+                serv.Dispose();
                 string a = "";
                 return lstMenu;
             }
