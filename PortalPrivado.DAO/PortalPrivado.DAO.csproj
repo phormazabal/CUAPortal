@@ -33,6 +33,10 @@
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
+    <Reference Include="PortalPrivado.BO">
+      <HintPath>..\PortalPrivado.BO\bin\Debug\PortalPrivado.BO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PacienteDao.cs" />
@@ -48,12 +52,6 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="MenuDao.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\PortalPrivado.BO\PortalPrivado.BO.csproj">
-      <Project>{2E3850E2-BED2-46F6-B2E9-1422FA6FFB9D}</Project>
-      <Name>PortalPrivado.BO</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

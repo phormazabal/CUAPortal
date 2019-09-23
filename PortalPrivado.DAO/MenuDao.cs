@@ -20,7 +20,12 @@ namespace PortalPrivado.DAO
                 serv.Credentials = new NetworkCredential("phormazabal", "Clinica2019");
                 GetMenu = serv.SI_os_GetMenu(dT_GetMenu);
                 serv.Dispose();
-                string a = "";
+				for (int i = 0; i < GetMenu.Length; i++)
+				{
+					Menu objMenu = new Menu();
+					objMenu.IdMenu = GetMenu[i].IdMenu;
+					objMenu.GlosaMenu = GetMenu[i].Glosa;
+				}
                 return lstMenu;
             }
             catch (Exception ex)

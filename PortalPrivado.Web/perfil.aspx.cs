@@ -12,9 +12,7 @@ namespace PortalPrivado.Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            MenuDao objMenu = new MenuDao();
-
-            objMenu.GetMenu();
+            
         }
     }
 }
