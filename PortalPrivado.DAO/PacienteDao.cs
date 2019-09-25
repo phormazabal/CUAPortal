@@ -28,7 +28,8 @@ namespace PortalPrivado.DAO
             objPaciente.Nombre = oRInfo.Nombre;
             objPaciente.Apellidos = oRInfo.AppPat + " " + oRInfo.AppMat;
             objPaciente.Email = oRInfo.Email;
-            objPaciente.FechaNacimiento = DateTime.Parse(oRInfo.FechaNacimiento);
+            string Fecha = oRInfo.FechaNacimiento.Substring(6, 2) + "/" + oRInfo.FechaNacimiento.Substring(4, 2) + "/" + oRInfo.FechaNacimiento.Substring(0, 4);
+            objPaciente.FechaNacimiento = DateTime.Parse(Fecha);
             objPaciente.Rut = DocId;
             objPaciente.Telefono1 = oRInfo.Telefono1;
             objPaciente.Telefono2 = oRInfo.Telefono2;

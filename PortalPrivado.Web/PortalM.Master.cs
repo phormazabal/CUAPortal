@@ -14,11 +14,15 @@ namespace PortalPrivado.Web
         {
             if (!Page.IsPostBack)
             {
-                MenuDao oMenudao = new MenuDao();               
+                MenuDao oMenudao = new MenuDao();
+                Paciente oPaciente = new Paciente();
+                PacienteDao oPacienteDao = new PacienteDao();
+                oPaciente = oPacienteDao.GetPaciente("13072764-6");
+                lbNombre.Text = oPaciente.Nombre + " " + oPaciente.Apellidos;
                 List<BO.Menu> lstMenu = oMenudao.GetMenu();
                 RpMenu.DataSource = lstMenu;
                 RpMenu.DataBind();
-               
+                 
             }
         }
     }
