@@ -16,6 +16,7 @@ namespace PortalPrivado.BO
         String _Password;
         DateTime _FechaNacimiento;
         String _Rut;
+        String _Direccion;
 
         public string Nombre { get => _Nombre; set => _Nombre = value; }
         public string Apellidos { get => _Apellidos; set => _Apellidos = value; }
@@ -25,5 +26,6 @@ namespace PortalPrivado.BO
         public string Password { get => _Password; set => _Password = value; }
         public DateTime FechaNacimiento { get => _FechaNacimiento; set => _FechaNacimiento = value; }
         public string Rut { get => _Rut; set => _Rut = value; }
+        public string Direccion { get => _Direccion; set => _Direccion = value; }
     }
 }

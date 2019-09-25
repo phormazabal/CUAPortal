@@ -27,6 +27,15 @@ namespace PortalPrivado.DAO
 					objMenu.IdMenu = GetMenu[i].IdMenu;
 					objMenu.GlosaMenu = GetMenu[i].Glosa;
                     objMenu.Url = GetMenu[i].URL;
+                    if (GetMenu[i].SubMenu != null)
+                    for (int j = 0; j < GetMenu[i].SubMenu.Length; j++)
+                    {
+                        SubMenu oSubMenu = new SubMenu();
+                        oSubMenu.IdSubMenu = GetMenu[i].SubMenu[j].IdSubMenu;
+                        oSubMenu.Glosa = GetMenu[i].SubMenu[j].GlosaSubMenu;
+                        oSubMenu.Url = GetMenu[i].SubMenu[j].URL;
+                        objMenu.lstSubMenu.Add(oSubMenu);
+                    }
                     lstMenu.Add(objMenu);
 				}
                 return lstMenu;

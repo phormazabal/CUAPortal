@@ -18,6 +18,7 @@ namespace PortalPrivado.Web
                 List<BO.Menu> lstMenu = oMenudao.GetMenu();
                 RpMenu.DataSource = lstMenu;
                 RpMenu.DataBind();
+               
             }
         }
     }

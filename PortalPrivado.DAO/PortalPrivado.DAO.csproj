@@ -57,6 +57,9 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="MenuDao.cs" />
+    <Compile Include="Web References\WsInfoPac\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -75,6 +78,11 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>PortalPrivado_DAO_WsMenu_SI_os_GetMenuService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://dcpiddev.clinicauandes.cl:50000/dir/wsdl?p=ic/52358ef4c82130b1bb6027a2b51ccc26">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WsInfoPac</RelPath>
+      <UpdateFromURL>http://dcpiddev.clinicauandes.cl:50000/dir/wsdl?p=ic/52358ef4c82130b1bb6027a2b51ccc26</UpdateFromURL>
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +103,11 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\WsMenu\SI_os_GetMenu.wsdl" />
+    <None Include="Web References\WsInfoPac\SI_os_InfoPaciente.wsdl" />
+    <None Include="Web References\WsInfoPac\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

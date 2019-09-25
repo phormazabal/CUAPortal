@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:p1="urn:Clinicauandes.org.ish.InfoPac" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:p2="urn:clinicauandes.org.ish.InfoPac" name="SI_os_InfoPaciente" targetNamespace="urn:Clinicauandes.org.ish.InfoPac" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_os_InfoPaciente" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:clinicauandes.org.ish.InfoPac" targetNamespace="urn:clinicauandes.org.ish.InfoPac" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="urn:Clinicauandes.org.ish.InfoPac" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:element name="MT_fault">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="standard" type="p1:ExchangeFaultData" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MT_InfoPaciente" type="p1:DT_InfoPaciente" />
+      <xsd:element name="MT_r_InfoPaciente" type="p1:DT_r_InfoPaciente" />
+    </xsd:schema>
+    <xsd:schema xmlns="urn:Clinicauandes.org.ish.InfoPac" targetNamespace="urn:Clinicauandes.org.ish.InfoPac" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
+      <xsd:complexType name="ExchangeFaultData">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">4cd698c7aa4011e99acf000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="faultText" type="xsd:string" />
+          <xsd:element minOccurs="0" name="faultUrl" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="faultDetail" type="p1:ExchangeLogData" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ExchangeLogData">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">5824bec5aa4011e9aad1000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="severity" type="xsd:string" />
+          <xsd:element name="text" type="xsd:string" />
+          <xsd:element minOccurs="0" name="url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="id" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_InfoPaciente">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">38335d4e9f3711e9c818000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="IdPac" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_r_InfoPaciente">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">2963eb599f3811e99c20000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="Nombre" type="xsd:string" />
+          <xsd:element name="SegundoNom" type="xsd:string" />
+          <xsd:element name="AppPat" type="xsd:string" />
+          <xsd:element name="AppMat" type="xsd:string" />
+          <xsd:element name="FechaNacimiento" type="xsd:string" />
+          <xsd:element name="Direccion" type="xsd:string" />
+          <xsd:element name="Telefono1" type="xsd:string" />
+          <xsd:element name="Telefono2" type="xsd:string" />
+          <xsd:element name="Email" type="xsd:string" />
+          <xsd:element name="Libre1" type="xsd:string" />
+          <xsd:element name="Libre2" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_InfoPaciente">
+    <wsdl:documentation />
+    <wsdl:part name="MT_InfoPaciente" element="p2:MT_InfoPaciente" />
+  </wsdl:message>
+  <wsdl:message name="MT_r_InfoPaciente">
+    <wsdl:documentation />
+    <wsdl:part name="MT_r_InfoPaciente" element="p2:MT_r_InfoPaciente" />
+  </wsdl:message>
+  <wsdl:message name="MT_fault">
+    <wsdl:documentation />
+    <wsdl:part name="MT_fault" element="p2:MT_fault" />
+  </wsdl:message>
+  <wsdl:portType name="SI_os_InfoPaciente">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_os_InfoPaciente">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_os_InfoPaciente" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_InfoPaciente" />
+      <wsdl:output message="p1:MT_r_InfoPaciente" />
+      <wsdl:fault name="MT_fault" message="p1:MT_fault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_os_InfoPacienteBinding" type="p1:SI_os_InfoPaciente">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_os_InfoPaciente">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+      <wsdl:fault name="MT_fault">
+        <fault use="literal" name="MT_fault" namespace="" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_os_InfoPacienteService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_os_InfoPacienteBinding">
+      <address location="http://dcpiddev.clinicauandes.cl:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=SI_os_InfoPaciente&amp;interfaceNamespace=urn%3AClinicauandes.org.ish.InfoPac" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_os_InfoPacienteBinding">
+      <address location="https://dcpiddev.clinicauandes.cl:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=SI_os_InfoPaciente&amp;interfaceNamespace=urn%3AClinicauandes.org.ish.InfoPac" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
