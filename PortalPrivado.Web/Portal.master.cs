@@ -14,7 +14,7 @@ namespace PortalPrivado.Web
             {
                 MenuDao oMenudao = new MenuDao();
                 List<Menu> lstMenu = new List<Menu>();
-                lstMenu = oMenudao.GetMenu();
+                lstMenu = oMenudao.GetMenu("");
             }
         }
     }

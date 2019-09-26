@@ -8,7 +8,7 @@ namespace PortalPrivado.DAO
 {
     public class MenuDao
     {
-        public List<Menu> GetMenu()
+        public List<Menu> GetMenu(String Nbp)
         {
             try
             {
@@ -17,7 +17,7 @@ namespace PortalPrivado.DAO
                 WsMenu.SI_os_GetMenuService serv = new WsMenu.SI_os_GetMenuService();
                 WsMenu.DT_r_GetMenuMenu[] GetMenu;
                 WsMenu.DT_GetMenu dT_GetMenu = new WsMenu.DT_GetMenu();
-                dT_GetMenu.IdMenu = "";
+                dT_GetMenu.Nbp = Nbp;
                 serv.Credentials = new NetworkCredential(oConfig.User, oConfig.Pass);
                 GetMenu = serv.SI_os_GetMenu(dT_GetMenu);
                 serv.Dispose();

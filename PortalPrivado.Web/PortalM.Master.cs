@@ -19,7 +19,7 @@ namespace PortalPrivado.Web
                 PacienteDao oPacienteDao = new PacienteDao();
                 oPaciente = oPacienteDao.GetPaciente("13072764-6");
                 lbNombre.Text = oPaciente.Nombre + " " + oPaciente.Apellidos;
-                List<BO.Menu> lstMenu = oMenudao.GetMenu();
+                List<BO.Menu> lstMenu = oMenudao.GetMenu("2225003");
                 RpMenu.DataSource = lstMenu;
                 RpMenu.DataBind();
                  

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<wsdl:definitions xmlns:p1="urn:Clinicauandes.org.ish.GetMenuPortal" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_os_GetMenu" targetNamespace="urn:Clinicauandes.org.ish.GetMenuPortal" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:p1="urn:Clinicauandes.org.ish.GetMenuPortal" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_os_GetMenu" targetNamespace="urn:Clinicauandes.org.ish.GetMenuPortal" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:documentation />
   <wsp:UsingPolicy wsdl:required="true" />
   <wsp:Policy wsu:Id="OP_SI_os_GetMenu" />
   <wsdl:types>
     <xsd:schema xmlns="urn:Clinicauandes.org.ish.GetMenuPortal" targetNamespace="urn:Clinicauandes.org.ish.GetMenuPortal" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
       <xsd:element name="MT_GetMenu" type="p1:DT_GetMenu" />
       <xsd:element name="MT_r_GetMenu" type="p1:DT_r_GetMenu" />
       <xsd:element name="MM_fault">
@@ -81,10 +83,14 @@
       </xsd:complexType>
       <xsd:complexType name="DT_GetMenu">
         <xsd:annotation>
-          <xsd:appinfo source="http://sap.com/xi/VersionID">35fe368dd4d311e991b7000000527bd2</xsd:appinfo>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">302d4cc7dfca11e98ecc000000527bd2</xsd:appinfo>
         </xsd:annotation>
         <xsd:sequence>
-          <xsd:element name="IdMenu" type="xsd:string" />
+          <xsd:element name="Nbp" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">30181d02dfca11e9845a8c04ba144d5c</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
         </xsd:sequence>
       </xsd:complexType>
       <xsd:complexType name="ExchangeFaultData">

@@ -51,13 +51,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Web References\WsMenu\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
-    </Compile>
     <Compile Include="MenuDao.cs" />
     <Compile Include="Web References\WsInfoPac\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WsMenu\Reference.cs">
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -68,21 +66,15 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <WebReferenceUrl Include="http://dcpiddev.clinicauandes.cl:50000/dir/wsdl%3fp=ic/fa0a3dda1a8a37e39e81498fb2599595">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\WsMenu\</RelPath>
-      <UpdateFromURL>http://dcpiddev.clinicauandes.cl:50000/dir/wsdl%3fp=ic/fa0a3dda1a8a37e39e81498fb2599595</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>PortalPrivado_DAO_WsMenu_SI_os_GetMenuService</CachedSettingsPropName>
-    </WebReferenceUrl>
     <WebReferenceUrl Include="http://dcpiddev.clinicauandes.cl:50000/dir/wsdl?p=ic/52358ef4c82130b1bb6027a2b51ccc26">
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WsInfoPac</RelPath>
       <UpdateFromURL>http://dcpiddev.clinicauandes.cl:50000/dir/wsdl?p=ic/52358ef4c82130b1bb6027a2b51ccc26</UpdateFromURL>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://dcpiddev.clinicauandes.cl:50000/dir/wsdl?p=ic/fa0a3dda1a8a37e39e81498fb2599595">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WsMenu</RelPath>
+      <UpdateFromURL>http://dcpiddev.clinicauandes.cl:50000/dir/wsdl?p=ic/fa0a3dda1a8a37e39e81498fb2599595</UpdateFromURL>
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
@@ -95,16 +87,13 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Web References\WsMenu\DT_r_GetMenuMenu.datasource">
-      <DependentUpon>Reference.map</DependentUpon>
-    </None>
-    <None Include="Web References\WsMenu\Reference.map">
+    <None Include="Web References\WsInfoPac\SI_os_InfoPaciente.wsdl" />
+    <None Include="Web References\WsInfoPac\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <None Include="Web References\WsMenu\SI_os_GetMenu.wsdl" />
-    <None Include="Web References\WsInfoPac\SI_os_InfoPaciente.wsdl" />
-    <None Include="Web References\WsInfoPac\Reference.map">
+    <None Include="Web References\WsMenu\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

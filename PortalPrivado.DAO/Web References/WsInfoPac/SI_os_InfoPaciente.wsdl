@@ -6,8 +6,6 @@
   <wsdl:types>
     <xsd:schema xmlns="urn:clinicauandes.org.ish.InfoPac" targetNamespace="urn:clinicauandes.org.ish.InfoPac" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
       <xsd:import namespace="urn:Clinicauandes.org.ish.InfoPac" />
-      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
-      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
       <xsd:element name="MT_fault">
         <xsd:complexType>
           <xsd:sequence>
@@ -19,8 +17,6 @@
       <xsd:element name="MT_r_InfoPaciente" type="p1:DT_r_InfoPaciente" />
     </xsd:schema>
     <xsd:schema xmlns="urn:Clinicauandes.org.ish.InfoPac" targetNamespace="urn:Clinicauandes.org.ish.InfoPac" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
-      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/" />
       <xsd:complexType name="ExchangeFaultData">
         <xsd:annotation>
           <xsd:appinfo source="http://sap.com/xi/VersionID">4cd698c7aa4011e99acf000000527bd2</xsd:appinfo>
