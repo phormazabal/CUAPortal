@@ -290,7 +290,7 @@
                     <ul>
                         <asp:Repeater ID="RpMenu" runat="server">
                             <ItemTemplate>
-                                <li><a href='<%# Eval("Url") %>'><%# Eval("GlosaMenu") %>
+                                <li  <%# Eval("Url").Equals(Request.Url.LocalPath) ? "class='activo'":"" %> ><a href='<%# Eval("Url") %>'><%# Eval("GlosaMenu") %>
                                     <%# ((System.Collections.Generic.List<PortalPrivado.BO.SubMenu>)Eval("lstSubMenu")).Count > 0 ? "<i class='fas fa-chevron-right'></i>":""%>
                                 </a>
 

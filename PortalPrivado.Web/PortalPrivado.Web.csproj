@@ -67,7 +67,6 @@
     <Content Include="perfil.aspx" />
     <Content Include="Web.config" />
     <Content Include="Global.asax" />
-    <Content Include="Portal.master" />
     <Content Include="css\estilos.min.css" />
     <Content Include="css\bootstrap-grid.min.css" />
     <Content Include="css\estilos.css" />
@@ -306,13 +305,6 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="Portal.master.cs">
-      <DependentUpon>Portal.master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Portal.master.designer.cs">
-      <DependentUpon>Portal.master</DependentUpon>
     </Compile>
     <Compile Include="PortalM.Master.cs">
       <DependentUpon>PortalM.Master</DependentUpon>

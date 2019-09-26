@@ -239,7 +239,7 @@ a:hover {
   color: #616A71;
   text-decoration: none;
 }
-
+ 
 h2.t-2 {
   font-family: "BellGothicStd", sans-serif;
   color: #333F48;
@@ -6674,7 +6674,7 @@ header .head .head-bottom .box-login.logeado:hover .menu-usuario {
 .home-priv .panel-usuario ul li.activo a {
   color: #78BE20;
 }
-
+   
 .home-priv .panel-usuario ul li .submenu {
   margin: -.5em 0 1em;
   padding-left: .5em;
@@ -6718,7 +6718,9 @@ header .head .head-bottom .box-login.logeado:hover .menu-usuario {
   padding: 1.8em 2.3em;
   max-width: 100%;
 }
-
+.home-priv .panel-usuario ul li > a:hover {
+    color: #78BE20;
+}
 .home-priv .box-perfil .form-group {
   width: 100%;
   height: 4.17em;
