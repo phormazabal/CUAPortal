@@ -58,5 +58,12 @@ namespace PortalPrivado.Web
             
             return lst.ToArray();
         }
+
+       
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+            String a = hdRut.Value.ToString();
+        }
     }
 }
