@@ -1,5 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PortalM.Master" AutoEventWireup="true" CodeBehind="ReservaHora.aspx.cs" Inherits="PortalPrivado.Web.ReservaHora" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" runat="Server" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="contentPlaceHolder" runat="server">
+    <head runat="server">
+    </head>
+    <asp:ScriptManager ID="ScriptManager2" runat="server"></asp:ScriptManager>
     <div class="box-perfil" id="form-perfil">
         <div class="pasos-reserva">
           <div class="paso activo">
@@ -27,13 +33,25 @@
             <p>Reserva</p>
           </div>
         </div>
-
+       
         <div class="box-busqueda">
           <label>Ingrese la especialidad o nombre del profesional</label>
-          <div class="w-form">
-            <input type="text">
-            <button class="btn btn-amarillo">BUSCAR </button>
-          </div>
+          
+              <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                  <ContentTemplate>
+                      <div class="w-form">
+                      <asp:TextBox ID="txtbus" CssClass="texto" runat="server"></asp:TextBox>
+                         
+                      <ajaxToolkit:AutoCompleteExtender ServiceMethod="getBusqueda" MinimumPrefixLength="1" CompletionInterval="10"
+                                            EnableCaching="false" CompletionSetCount="10" TargetControlID="txtbus" ID="AutoCompleteExtender1"
+                                            runat="server" FirstRowSelected="false">
+                                        </ajaxToolkit:AutoCompleteExtender><button class="btn btn-amarillo">BUSCAR </button></div>
+                  </ContentTemplate>
+
+              </asp:UpdatePanel>
+            
+            
+
         </div>
       </div>
 </asp:Content>
