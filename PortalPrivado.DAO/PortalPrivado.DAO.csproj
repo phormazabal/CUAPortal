@@ -58,6 +58,10 @@
     <Compile Include="Web References\WsMenu\Reference.cs">
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
+    <Compile Include="Web References\WsGetMedicos\Reference.cs">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="MedicoDao.cs" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -75,6 +79,11 @@
       <UrlBehavior>Dynamic</UrlBehavior>
       <RelPath>Web References\WsMenu</RelPath>
       <UpdateFromURL>http://dcpiddev.clinicauandes.cl:50000/dir/wsdl?p=ic/fa0a3dda1a8a37e39e81498fb2599595</UpdateFromURL>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://qcpiqqas.clinicauandes.cl:50000/dir/wsdl?p=sa/5479abd612223e4eb315e527800fb46c">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WsGetMedicos</RelPath>
+      <UpdateFromURL>http://qcpiqqas.clinicauandes.cl:50000/dir/wsdl?p=sa/5479abd612223e4eb315e527800fb46c</UpdateFromURL>
     </WebReferenceUrl>
   </ItemGroup>
   <ItemGroup>
@@ -94,6 +103,11 @@
     </None>
     <None Include="Web References\WsMenu\SI_os_GetMenu.wsdl" />
     <None Include="Web References\WsMenu\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WsGetMedicos\SI_os_ObtenerMedico.wsdl" />
+    <None Include="Web References\WsGetMedicos\Reference.map">
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
