@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Inicio.aspx" />
     <Content Include="perfil.aspx" />
+    <Content Include="Reserva.aspx" />
     <Content Include="ReservaHora.aspx" />
     <Content Include="Web.config" />
     <Content Include="Global.asax" />
@@ -317,6 +318,13 @@
     </Compile>
     <Compile Include="PortalM.Master.designer.cs">
       <DependentUpon>PortalM.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Reserva.aspx.cs">
+      <DependentUpon>Reserva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reserva.aspx.designer.cs">
+      <DependentUpon>Reserva.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReservaHora.aspx.cs">
       <DependentUpon>ReservaHora.aspx</DependentUpon>
