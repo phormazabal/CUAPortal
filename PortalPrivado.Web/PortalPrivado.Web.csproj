@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>PortalPrivado.Web</RootNamespace>
     <AssemblyName>PortalPrivado.Web</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
     <IISExpressSSLPort />
@@ -63,7 +63,7 @@
       <HintPath>..\PortalPrivado.BO\bin\Debug\PortalPrivado.BO.dll</HintPath>
     </Reference>
     <Reference Include="AjaxControlToolkit">
-      <HintPath>bin\AjaxControlToolkit.dll</HintPath>
+      <HintPath>..\packages\AjaxControlToolkit.19.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -293,6 +293,7 @@
     <Content Include="scss\base\_fonts.scss" />
     <Content Include="scss\base\_botones.scss" />
     <Content Include="scss\base\_general.scss" />
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Inicio.aspx.cs">
@@ -355,7 +356,6 @@
     <None Include="images\.DS_Store" />
     <None Include="js\.DS_Store" />
     <Content Include="PortalM.Master" />
-    <None Include="packages.config" />
     <None Include="scss\.DS_Store" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
