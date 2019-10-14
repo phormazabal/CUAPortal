@@ -40,5 +40,41 @@ namespace PortalPrivado.DAO {
                 return ((string)(this["Pass"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("phormazabal")]
+        public string UserQa {
+            get {
+                return ((string)(this["UserQa"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Wario0862")]
+        public string PassQa {
+            get {
+                return ((string)(this["PassQa"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://uandesdev.lfi.cl//api/profesionales/profesionales")]
+        public string UrlRestLfi {
+            get {
+                return ((string)(this["UrlRestLfi"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://uandesdev.lfi.cl/api/profesionales/profesionales({0})/ImagenDoctor")]
+        public string UrlRestImg {
+            get {
+                return ((string)(this["UrlRestImg"]));
+            }
+        }
     }
 }

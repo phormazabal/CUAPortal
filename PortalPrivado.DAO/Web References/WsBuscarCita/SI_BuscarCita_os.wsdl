@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:clinicauandes.org:ish.pm:buscarcita" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_BuscarCita_os" targetNamespace="urn:clinicauandes.org:ish.pm:buscarcita" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_BuscarCita_os" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:clinicauandes.org:ish.pm:buscarcita" targetNamespace="urn:clinicauandes.org:ish.pm:buscarcita" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_r_BuscarCita" type="p1:DT_r_BuscarCita" />
+      <xsd:element name="MT_BuscarCita" type="p1:DT_BuscarCita" />
+      <xsd:element name="MT_fault">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="standard" type="p1:ExchangeFaultData" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="ExchangeFaultData">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">773f9202345911e3add5000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="faultText" type="xsd:string" />
+          <xsd:element minOccurs="0" name="faultUrl" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="faultDetail" type="p1:ExchangeLogData" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_r_BuscarCita">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">2d277f47cf0811e38115000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="BuscaOfertaGral">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">5688a57529b911e2974654c2f29d8623</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="rutmed" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">5688a56d29b911e295ac54c2f29d8623</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="nommed" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">5688a56e29b911e2945754c2f29d8623</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="apepat" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">5688a57029b911e2b4dc54c2f29d8623</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="apemat" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8bbe1948705911e2cb8954c2f29d8623</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="fecha" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">8bbe1949705911e2b25854c2f29d8623</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="especialidad" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">16f72673d39b11e2a94c54c2f29d8623</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Id_medico" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">3ca7640acf0811e3ce0454047fbd331d</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="id_especialidad" type="xsd:string" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Errores" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">8153b08b6fa111e29d4c54c2f29d8623</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_BuscarCita">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">0e94ce68d20511e2a036000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="BuscaOfertaGral">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">b34e0e4159cc11e2b51754c2f29d8623</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="idmed" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b34de96359cc11e293ba54c2f29d8623</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="codesp" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b34de96459cc11e2aa5554c2f29d8623</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="codisa" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">b34e0e3f59cc11e2c80854c2f29d8623</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="fecha" type="xsd:string" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ExchangeLogData">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">7746a790345911e3c503000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="severity" type="xsd:string" />
+          <xsd:element name="text" type="xsd:string" />
+          <xsd:element minOccurs="0" name="url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="id" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_BuscarCita">
+    <wsdl:documentation />
+    <wsdl:part name="MT_BuscarCita" element="p1:MT_BuscarCita" />
+  </wsdl:message>
+  <wsdl:message name="MT_r_BuscarCita">
+    <wsdl:documentation />
+    <wsdl:part name="MT_r_BuscarCita" element="p1:MT_r_BuscarCita" />
+  </wsdl:message>
+  <wsdl:message name="MT_fault">
+    <wsdl:documentation />
+    <wsdl:part name="MT_fault" element="p1:MT_fault" />
+  </wsdl:message>
+  <wsdl:portType name="SI_BuscarCita_os">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_BuscarCita_os">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_BuscarCita_os" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_BuscarCita" />
+      <wsdl:output message="p1:MT_r_BuscarCita" />
+      <wsdl:fault name="MT_fault" message="p1:MT_fault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_BuscarCita_osBinding" type="p1:SI_BuscarCita_os">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_BuscarCita_os">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+      <wsdl:fault name="MT_fault">
+        <fault use="literal" name="MT_fault" namespace="" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_BuscarCita_osService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_BuscarCita_osBinding">
+      <address location="http://dcpiddev.clinicauandes.cl:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=SI_BuscarCita_os&amp;interfaceNamespace=urn%3Aclinicauandes.org%3Aish.pm%3Abuscarcita" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_BuscarCita_osBinding">
+      <address location="https://dcpiddev.clinicauandes.cl:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=SI_BuscarCita_os&amp;interfaceNamespace=urn%3Aclinicauandes.org%3Aish.pm%3Abuscarcita" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

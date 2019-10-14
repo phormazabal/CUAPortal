@@ -1,17 +1,20 @@
 //Editar
 const editForm = document.querySelectorAll('span.editar-f');
 const editables = document.querySelectorAll('input.editable');
+const formGroup = document.querySelectorAll('.f-edit');
 const formPerfil = document.getElementById('form-perfil');
 const cancelarEdit = document.getElementById('cancelar-editar');
 const guardarEdit = document.getElementById('guardar-editar');
+const modificarEdit = document.getElementById('modificar-editar');
+const verPass = document.getElementById('ver-pass');
+const inputPass = document.getElementById('input-pass');
 
 if(editForm){
   for (const edit of editForm) {
     edit.addEventListener("click", function(e){
+      edit.parentElement.parentElement.classList.add('editable');
       formPerfil.classList.add('modo-editar')
-      for (const inputEditable of editables) {
-        inputEditable.removeAttribute('readonly')
-      }
+      edit.parentElement.parentElement.querySelector('input').removeAttribute('readonly');
     });
   }
 }
@@ -19,8 +22,11 @@ if(cancelarEdit){
   cancelarEdit.addEventListener("click", function(e){
     e.preventDefault();
     formPerfil.classList.remove('modo-editar')
+    for (const fg of formGroup) {
+      fg.classList.remove('editable');
+    }
     for (const inputEditable of editables) {
-      inputEditable.addAttribute('readonly')
+      inputEditable.setAttribute('readonly','')
     }
   });   
 }
@@ -28,8 +34,37 @@ if(guardarEdit){
   guardarEdit.addEventListener("click", function(e){
     e.preventDefault();
     formPerfil.classList.remove('modo-editar')
+    for (const fg of formGroup) {
+      fg.classList.remove('editable');
+    }
     for (const inputEditable of editables) {
-      inputEditable.addAttribute('readonly')
+      inputEditable.setAttribute('readonly','')
+    }
+  });   
+}
+if(modificarEdit){
+  modificarEdit.addEventListener("click", function(e){
+    e.preventDefault();
+    formPerfil.classList.add('modo-editar')
+    for (const fg of formGroup) {
+      fg.classList.add('editable');
+    }
+    for (const inputEditable of editables) {
+      inputEditable.removeAttribute('readonly')
+    }
+  });   
+}
+if(verPass){
+  let c = 0;
+  verPass.addEventListener("click", function(e){
+    e.preventDefault();
+    if(c == 0){
+      inputPass.type = 'text'
+      c = 1
+    }
+    else {
+      inputPass.type = 'password'
+      c = 0
     }
   });   
 }
@@ -99,3 +134,39 @@ if(btnDesvincularExito){
     });
   }
 }
+
+$(document).ready(function(){
+
+  $('.menu-usuario').on('click','.m-dropdown.close',function(){
+    $(this).removeClass('close');
+    $(this).addClass('open');
+  });
+  $('.menu-usuario').on('click','.m-dropdown.open',function(){
+    $(this).addClass('close');
+    $(this).removeClass('open');
+  });
+  $(".box-login").mouseleave(function() {
+    $('.m-dropdown').removeClass('open');
+    $('.m-dropdown').addClass('close');
+  });
+
+  $('.panel-usuario').on('click','.m-dropdown.close',function(){
+    $(this).removeClass('close');
+    $(this).addClass('open');
+  });
+  $('.panel-usuario').on('click','.m-dropdown.open',function(){
+    $(this).addClass('close');
+    $(this).removeClass('open');
+  });
+});
+
+
+$(document).ready(function() {
+    $('.chosen-select').select2({
+        "language": {
+            "noResults": function(){
+                return "No hay resultados";
+            }
+        }
+    });
+});

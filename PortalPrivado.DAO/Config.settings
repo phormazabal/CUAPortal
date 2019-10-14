@@ -8,5 +8,17 @@
     <Setting Name="Pass" Type="System.String" Scope="Application">
       <Value Profile="(Default)">Clinica2019</Value>
     </Setting>
+    <Setting Name="UserQa" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">phormazabal</Value>
+    </Setting>
+    <Setting Name="PassQa" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Wario0862</Value>
+    </Setting>
+    <Setting Name="UrlRestLfi" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://uandesdev.lfi.cl//api/profesionales/profesionales</Value>
+    </Setting>
+    <Setting Name="UrlRestImg" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://uandesdev.lfi.cl/api/profesionales/profesionales({0})/ImagenDoctor</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

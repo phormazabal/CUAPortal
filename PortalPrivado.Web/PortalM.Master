@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PortalM.master.cs" Inherits="PortalPrivado.Web.PortalM" %>
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <!DOCTYPE html>
 <html>
@@ -11,10 +12,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"
-        async>
+        async />
     <link rel="stylesheet" href="css/fonts.css" type="text/css">
+    <link href='css/fullcalendar.min.css' rel='stylesheet' />
     <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
     <link rel="stylesheet" href="css/tiny-slider.css" type="text/css">
+    <link rel="stylesheet" href="css/select2.min.css" type="text/css" />
     <link rel="stylesheet" href="css/animate.css" type="text/css">
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <link rel="stylesheet" href="css/estilos.css" type="text/css">
@@ -71,16 +74,24 @@
                         <i class="fas fa-chevron-down"></i>
                         <div class="menu-usuario">
                             <ul>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Mi Perfil</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Personas vinculadas</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Reserva de horas</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Reserva de horas dental</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Mis Reservas de horas activas</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Mi historial de horas médicas</a><span>2 nuevos</span></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Mis profesionales favoritos</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Resultados de exámenes</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Seguro y convenios</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Pago de cuentas</a></li>
+                                <li><a href="#">Mi Perfil</a></li>
+                                <li class="m-dropdown close"><a href="#">Personas vinculadas <i class="fas fa-chevron-right"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="#">Baltazar Eskenazi Perez</a></li>
+                                        <li class="activo"><a href="#">Maximiliano Eskenazi Perez
+                                        </a></li>
+                                        <li><a href="#">Maria Jose Riquelme Perez</a></li>
+                                        <li><a href="#">Miguel Eskenazi Torres</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Reserva de horas</a></li>
+                                <li><a href="#">Reserva de horas dental</a></li>
+                                <li><a href="#">Mis Reservas de horas activas</a></li>
+                                <li><a href="#">Mi historial de horas médicas</a></li>
+                                <li><a href="#">Mis profesionales favoritos</a></li>
+                                <li><a href="#">Resultados de exámenes <i class="fas fa-chevron-right"></i></a></li>
+                                <li><a href="#">Seguro y convenios</a></li>
+                                <li><a href="#">Pago de cuentas</a></li>
                             </ul>
                             <div class="cerrar-sesion-user">
                                 <i class="fas fa-times"></i>Cerrar sesión
@@ -124,16 +135,24 @@
                     <div class="box-login-movil">
                         <div class="menu-usuario">
                             <ul>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Mi Perfil</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Personas vinculadas</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Reserva de horas</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Reserva de horas dental</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Mis Reservas de horas activas</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Mi historial de horas médicas</a><span>2 nuevos</span></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Mis profesionales favoritos</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Resultados de exámenes</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Seguro y convenios</a></li>
-                                <li><a href="#"><i class="fas fa-chevron-right"></i>Pago de cuentas</a></li>
+                                <li><a href="#">Mi Perfil</a></li>
+                                <li class="m-dropdown close"><a href="#">Personas vinculadas <i class="fas fa-chevron-right"></i></a>
+                                    <ul class="submenu">
+                                        <li><a href="#">Baltazar Eskenazi Perez</a></li>
+                                        <li class="activo"><a href="#">Maximiliano Eskenazi Perez
+                                        </a></li>
+                                        <li><a href="#">Maria Jose Riquelme Perez</a></li>
+                                        <li><a href="#">Miguel Eskenazi Torres</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Reserva de horas</a></li>
+                                <li><a href="#">Reserva de horas dental</a></li>
+                                <li><a href="#">Mis Reservas de horas activas</a></li>
+                                <li><a href="#">Mi historial de horas médicas</a></li>
+                                <li><a href="#">Mis profesionales favoritos</a></li>
+                                <li><a href="#">Resultados de exámenes <i class="fas fa-chevron-right"></i></a></li>
+                                <li><a href="#">Seguro y convenios</a></li>
+                                <li><a href="#">Pago de cuentas</a></li>
                             </ul>
                             <div class="cerrar-sesion-user">
                                 <i class="fas fa-times"></i>Cerrar sesión
@@ -276,6 +295,7 @@
             <a href="#">Home</a> > Mi Clínica UANDES > Mi Perfil
         </div>
     </section>
+
     <section class="pb-2 home-priv">
         <div class="wrap">
             <div class="flex-stretch">
@@ -289,18 +309,18 @@
                     <ul>
                         <asp:Repeater ID="RpMenu" runat="server">
                             <ItemTemplate>
-                                <li  <%# Eval("Url").Equals(Request.Url.LocalPath) ? "class='activo'":"" %> ><a href='<%# Eval("Url") %>'><%# Eval("GlosaMenu") %>
-                                    <%# ((System.Collections.Generic.List<PortalPrivado.BO.SubMenu>)Eval("lstSubMenu")).Count > 0 ? "<i class='fas fa-chevron-right'></i>":""%>
-                                </a>
+                                <%# Eval("Url").Equals(Request.Url.LocalPath) ? "<li class='activo'><a href='#'>": 
+                                       ((System.Collections.Generic.List<PortalPrivado.BO.SubMenu>)Eval("lstSubMenu")).Count == 0 ? "<li><a href='" + Eval("Url") + "'>": "</a><li class='m-dropdown close'><a>" %>
 
-                                    <asp:Repeater ID="RpSubMenu" DataSource='<%# Eval("lstSubMenu") %>' runat='server'>
-                                        <ItemTemplate>
-                                            <ul class='submenu'>
-                                                <li><a href="#"><%# Eval("Glosa") %></a></li>
-                                            </ul>
-                                        </ItemTemplate>
-                                    </asp:Repeater>
-
+                                <%# Eval("GlosaMenu") %>
+                                <%# ((System.Collections.Generic.List<PortalPrivado.BO.SubMenu>)Eval("lstSubMenu")).Count > 0 ? "<i class='fas fa-chevron-right'></i></a>":"</a>"%>
+                                <asp:Repeater ID="RpSubMenu" DataSource='<%# Eval("lstSubMenu") %>' runat='server'>
+                                    <ItemTemplate>
+                                        <ul class='submenu'>
+                                            <li><a href="#"><%# Eval("Glosa") %></a></li>
+                                        </ul>
+                                    </ItemTemplate>
+                                </asp:Repeater>
                                 </li>
                             </ItemTemplate>
                         </asp:Repeater>
@@ -370,15 +390,20 @@
         </div>
     </footer>
 
+
+    <script src="js/select2.min.js" defer></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/tiny-slider.js" defer></script>
     <script src="js/lazyload.js" defer></script>
     <script type="text/javascript" src="js/slowNumber.js"></script>
     <script src="js/accordion.js" defer></script>
     <script src="js/wow.js" defer></script>
+    <script src='js/moment.min.js'></script>
+    <script src='js/fullcalendar.min.js'></script>
+    <script src='js/es.js'></script>
     <script type="text/javascript" src="js/funciones.js" defer></script>
     <script type="text/javascript" src="js/funciones-privado.js" defer></script>
     <script src="js/funciones-widget.js" defer></script>
-
 </body>
 </html>
 

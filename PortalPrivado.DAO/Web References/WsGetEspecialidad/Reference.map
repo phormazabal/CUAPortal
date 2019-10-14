@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://dcpiddev.clinicauandes.cl:50000/dir/wsdl?p=ic/b2f0951e0fa83c05bcfa3e3e7f6e6f4b" filename="Si_os_GetEspecialidad.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

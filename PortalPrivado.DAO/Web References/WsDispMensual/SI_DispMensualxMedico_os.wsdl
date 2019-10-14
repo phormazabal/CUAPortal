@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:p1="urn:clinicauandes.org:ish.pm:dispmensualxmedico" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" name="SI_DispMensualxMedico_os" targetNamespace="urn:clinicauandes.org:ish.pm:dispmensualxmedico" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation />
+  <wsp:UsingPolicy wsdl:required="true" />
+  <wsp:Policy wsu:Id="OP_SI_DispMensualxMedico_os" />
+  <wsdl:types>
+    <xsd:schema xmlns="urn:clinicauandes.org:ish.pm:dispmensualxmedico" targetNamespace="urn:clinicauandes.org:ish.pm:dispmensualxmedico" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <xsd:element name="MT_fault">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="standard" type="p1:ExchangeFaultData" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="MT_DispMensualxMedico" type="p1:DT_DispMensualxMedico" />
+      <xsd:element name="MT_r_DispMensualxMedico" type="p1:DT_r_DispMensualxMedico" />
+      <xsd:complexType name="ExchangeLogData">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">392b73bc345c11e3a4a5000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="severity" type="xsd:string" />
+          <xsd:element name="text" type="xsd:string" />
+          <xsd:element minOccurs="0" name="url" type="xsd:string" />
+          <xsd:element minOccurs="0" name="id" type="xsd:string" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_DispMensualxMedico">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">26ff8cee7b8f11e28b70000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" name="BuscaOfertaMedica">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">10240e42705f11e2979754c2f29d8623</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="idmed" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">1023da4b705f11e2970b54c2f29d8623</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="fecha" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">1023da4c705f11e2b8f454c2f29d8623</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ExchangeFaultData">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">3923c091345c11e38264000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="faultText" type="xsd:string" />
+          <xsd:element minOccurs="0" name="faultUrl" type="xsd:string" />
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="faultDetail" type="p1:ExchangeLogData" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="DT_r_DispMensualxMedico">
+        <xsd:annotation>
+          <xsd:appinfo source="http://sap.com/xi/VersionID">db86df308c1211e2a695000000527bd2</xsd:appinfo>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element minOccurs="0" maxOccurs="unbounded" name="BuscaOfertaMedica">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">9ff7a0fb3b1e11e2b72d54c2f29d8623</xsd:appinfo>
+            </xsd:annotation>
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element minOccurs="0" name="fecate" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">9ff775753b1e11e29d1c54c2f29d8623</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="horate" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">9ff7a0f63b1e11e2c4b354c2f29d8623</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="estado" type="xsd:string">
+                  <xsd:annotation>
+                    <xsd:appinfo source="http://sap.com/xi/TextID">298544f18c1311e2bfd454c2f29d8623</xsd:appinfo>
+                  </xsd:annotation>
+                </xsd:element>
+                <xsd:element minOccurs="0" name="Utratamiento" type="xsd:string" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="Errores" type="xsd:string">
+            <xsd:annotation>
+              <xsd:appinfo source="http://sap.com/xi/TextID">b81fbf323b1e11e2b50454c2f29d8623</xsd:appinfo>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="MT_DispMensualxMedico">
+    <wsdl:documentation />
+    <wsdl:part name="MT_DispMensualxMedico" element="p1:MT_DispMensualxMedico" />
+  </wsdl:message>
+  <wsdl:message name="MT_r_DispMensualxMedico">
+    <wsdl:documentation />
+    <wsdl:part name="MT_r_DispMensualxMedico" element="p1:MT_r_DispMensualxMedico" />
+  </wsdl:message>
+  <wsdl:message name="MT_fault">
+    <wsdl:documentation />
+    <wsdl:part name="MT_fault" element="p1:MT_fault" />
+  </wsdl:message>
+  <wsdl:portType name="SI_DispMensualxMedico_os">
+    <wsdl:documentation />
+    <wsdl:operation name="SI_DispMensualxMedico_os">
+      <wsdl:documentation />
+      <wsp:Policy>
+        <wsp:PolicyReference URI="#OP_SI_DispMensualxMedico_os" />
+      </wsp:Policy>
+      <wsdl:input message="p1:MT_DispMensualxMedico" />
+      <wsdl:output message="p1:MT_r_DispMensualxMedico" />
+      <wsdl:fault name="MT_fault" message="p1:MT_fault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SI_DispMensualxMedico_osBinding" type="p1:SI_DispMensualxMedico_os">
+    <binding transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    <wsdl:operation name="SI_DispMensualxMedico_os">
+      <operation soapAction="http://sap.com/xi/WebService/soap1.1" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:output>
+      <wsdl:fault name="MT_fault">
+        <fault use="literal" name="MT_fault" namespace="" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SI_DispMensualxMedico_osService">
+    <wsdl:port name="HTTP_Port" binding="p1:SI_DispMensualxMedico_osBinding">
+      <address location="http://dcpiddev.clinicauandes.cl:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DispMensualxMedico_os&amp;interfaceNamespace=urn%3Aclinicauandes.org%3Aish.pm%3Adispmensualxmedico" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+    <wsdl:port name="HTTPS_Port" binding="p1:SI_DispMensualxMedico_osBinding">
+      <address location="https://dcpiddev.clinicauandes.cl:50001/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DispMensualxMedico_os&amp;interfaceNamespace=urn%3Aclinicauandes.org%3Aish.pm%3Adispmensualxmedico" xmlns="http://schemas.xmlsoap.org/wsdl/soap/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

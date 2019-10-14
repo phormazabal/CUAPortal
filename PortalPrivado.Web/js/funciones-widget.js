@@ -218,6 +218,12 @@ if(acc){
   }
 }
 
+
+if($('.table-responsive').length){
+$('.table-responsive').basictable({
+  breakpoint: 768
+});
+}
 /*--CALENDAR--*/
 $(document).ready(function() {
     

@@ -14,56 +14,32 @@ namespace PortalPrivado.Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-        }
-        [System.Web.Script.Services.ScriptMethod()]
-        [System.Web.Services.WebMethod]
-        //public static List<String> getBusqueda(string prefixText)
-        //{
-        //    MedicoDao oMedico = new MedicoDao();
-        //    oMedico.GetMedicos();
-        //    List<Medicos> lstMed = new List<Medicos>();
-        //    lstMed = oMedico.GetMedicos();
-        //    var query = from i in lstMed
-        //                where i.Nombre.Contains(prefixText) || i.Nombre.Contains(prefixText.ToUpper())
-        //                select i.Nombre;
-
-        //    List<string> lst = query.ToList<string>();
-        //    if (lst.Count == 1)
-        //    {
-
-        //    }
-        //    //for (int i = 0; i < lst.Count; i++)
-        //    //{
-        //    //    lsts.Add(lst[i].Nombre);
-        //    //}
-        //    return lst;
-        //}
-        public static string[] getBusqueda(string prefixText)
-        {
-            MedicoDao oMedico = new MedicoDao();
-            oMedico.GetMedicos();
-            List<Medicos> lstMed = new List<Medicos>();
-            lstMed = oMedico.GetMedicos();
-            var query = from i in lstMed
-                        where i.Nombre.Contains(prefixText) || i.Nombre.Contains(prefixText.ToUpper())
-                        select i;
-
-            List<string> lst = new List<string>();
-            lstMed = query.ToList<Medicos>();
-            for (int i = 0; i < lstMed.Count; i++)
+            if (!Page.IsPostBack)
             {
-                lst.Add(AjaxControlToolkit.AutoCompleteExtender.CreateAutoCompleteItem(lstMed[i].Nombre, lstMed[i].RutMedico));
+                ReservaDao oReserva = new ReservaDao();
+                List<Busqueda> lstBusqueda = new List<Busqueda>();
+                lstBusqueda = oReserva.GetBusqueda();
+                dpBusqueda.DataSource = lstBusqueda;
+                dpBusqueda.DataValueField = "Id";
+                dpBusqueda.DataTextField = "Glosa";
+                dpBusqueda.DataBind();
             }
-            
-            return lst.ToArray();
-        }
-
-       
-
-        protected void Button1_Click1(object sender, EventArgs e)
-        {
-            String a = hdRut.Value.ToString();
+        } 
+        protected void btnAceptar_Click(object sender, EventArgs e)
+        {            
+            String parametro = Utilidades.Seguridad.Encriptar(dpBusqueda.SelectedValue);
+            String[] Classificacion = dpBusqueda.SelectedValue.Split('|');
+            if (Classificacion[1].Equals("M"))
+            {
+                AgendaDao AgendaDao = new AgendaDao();
+                List<Agenda> lstbusqueda = new List<Agenda>();
+                lstbusqueda = AgendaDao.GetAgenda("", Classificacion[0]);
+                HttpContext context;
+                context = HttpContext.Current;
+                context.Items.Add("lstbusqueda", lstbusqueda);
+                Server.Transfer("Reserva2.aspx");
+            }
+                //Response.Redirect("Reserva2.aspx?param=" + parametro);
         }
     }
 }

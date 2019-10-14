@@ -338,9 +338,16 @@ header {
               background: #579244;
             }
           }
+          @media only screen and (max-width: 991px) {
+            &.visible {
+              display: block;
+            }
+          } 
         }
         &:hover ul.submenu{
-          display: block;
+          @media only screen and (min-width: 991px) {
+            display: block;
+          }   
         }
       }
     }
@@ -967,5 +974,8 @@ header {
   }
   @include respond-to(640px){
     @include flex-between;
+    &.oculto {
+      display: none;
+    }
   }
 }

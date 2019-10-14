@@ -5,5 +5,20 @@
     <Setting Name="PortalPrivado_DAO_WsMenu_SI_os_GetMenuService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://dcpiddev.clinicauandes.cl:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=SI_os_GetMenu&amp;interfaceNamespace=urn%3AClinicauandes.org.ish.GetMenuPortal</Value>
     </Setting>
+    <Setting Name="PortalPrivado_DAO_WsGetEspecialidad_Si_os_GetEspecialidadService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dcpiddev.clinicauandes.cl:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=Si_os_GetEspecialidad&amp;interfaceNamespace=urn%3AClinicauandes.org.ish.GetEspecialidades</Value>
+    </Setting>
+    <Setting Name="PortalPrivado_DAO_WsGetBusqueda_Si_os_busquedaService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dcpiddev.clinicauandes.cl:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=Si_os_busqueda&amp;interfaceNamespace=urn%3AClinicauandes.org.GetBusquedapredic</Value>
+    </Setting>
+    <Setting Name="PortalPrivado_DAO_WsBuscarCita_SI_BuscarCita_osService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dcpiddev.clinicauandes.cl:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=SI_BuscarCita_os&amp;interfaceNamespace=urn%3Aclinicauandes.org%3Aish.pm%3Abuscarcita</Value>
+    </Setting>
+    <Setting Name="PortalPrivado_DAO_WsDispDiaria_SI_DispDiariaxMedico_osService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dcpiddev.clinicauandes.cl:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DispDiariaxMedico_os&amp;interfaceNamespace=urn%3Aclinicauandes.org%3Aish.pm%3Adispdiariaxmedico</Value>
+    </Setting>
+    <Setting Name="PortalPrivado_DAO_WsDispMensual_SI_DispMensualxMedico_osService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dcpiddev.clinicauandes.cl:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DispMensualxMedico_os&amp;interfaceNamespace=urn%3Aclinicauandes.org%3Aish.pm%3Adispmensualxmedico</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
