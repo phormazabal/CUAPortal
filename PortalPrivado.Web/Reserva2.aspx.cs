@@ -49,6 +49,7 @@ namespace PortalPrivado.Web
         }
         protected void hpVerAgenda(object sender, EventArgs e)
         {
+            
             HttpContext context;
             context = HttpContext.Current;
             Medicos medico = new Medicos();

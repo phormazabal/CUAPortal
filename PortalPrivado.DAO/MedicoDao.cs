@@ -55,7 +55,10 @@ namespace PortalPrivado.DAO
             {
                 DispoDiaria oDisponibilida = new DispoDiaria();
                 oDisponibilida.Especialidad = dr.BuscaOfertaMedica[i].especialidad;
-                oDisponibilida.Estado = dr.BuscaOfertaMedica[i].estado;
+                if (dr.BuscaOfertaMedica[i].estado.Equals("Disponible"))
+                    oDisponibilida.Estado = "Reservar";
+                else
+                    oDisponibilida.Estado = dr.BuscaOfertaMedica[i].estado;
                 oDisponibilida.Fecha = dr.BuscaOfertaMedica[i].fecate;
                 oDisponibilida.Hora = dr.BuscaOfertaMedica[i].horate.Substring(0, 2) + ":"
                     + dr.BuscaOfertaMedica[i].horate.Substring(2,2) + " Hrs";
@@ -63,7 +66,26 @@ namespace PortalPrivado.DAO
                 lst.Add(oDisponibilida);
             }
             return lst;
-
+        }
+        public List<String> GetDisponibilidadMensual(String fecha, String VMA)
+        {
+            Config oConfig = new Config();
+            List<String> lst = new List<String>();
+            WsDispMensual.SI_DispMensualxMedico_osService serv = new WsDispMensual.SI_DispMensualxMedico_osService();
+            WsDispMensual.DT_DispMensualxMedico dt = new WsDispMensual.DT_DispMensualxMedico();
+            WsDispMensual.DT_r_DispMensualxMedico dtr = new WsDispMensual.DT_r_DispMensualxMedico();
+            WsDispMensual.DT_DispMensualxMedicoBuscaOfertaMedica dt_info = new WsDispMensual.DT_DispMensualxMedicoBuscaOfertaMedica();
+            dt_info.fecha = fecha;
+            dt_info.idmed = VMA;
+            serv.Credentials = new NetworkCredential(oConfig.User, oConfig.Pass);
+            dt.BuscaOfertaMedica = dt_info;
+            dtr = serv.SI_DispMensualxMedico_os(dt);
+            for (int i = 0; i < dtr.BuscaOfertaMedica.Length; i++)
+            {
+                String dia = dtr.BuscaOfertaMedica[i].fecate;
+                lst.Add(dia);
+            }
+            return lst;
         }
       
     }
