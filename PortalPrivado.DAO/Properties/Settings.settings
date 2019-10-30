@@ -20,5 +20,8 @@
     <Setting Name="PortalPrivado_DAO_WsDispMensual_SI_DispMensualxMedico_osService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://dcpiddev.clinicauandes.cl:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=SI_DispMensualxMedico_os&amp;interfaceNamespace=urn%3Aclinicauandes.org%3Aish.pm%3Adispmensualxmedico</Value>
     </Setting>
+    <Setting Name="PortalPrivado_DAO_WsReserva_SI_ReservaCita_osService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://dcpiddev.clinicauandes.cl:50000/XISOAPAdapter/MessageServlet?senderParty=&amp;senderService=BC_PORTAL_WEB_115&amp;receiverParty=&amp;receiverService=&amp;interface=SI_ReservaCita_os&amp;interfaceNamespace=urn%3Aclinicauandes.org%3Aish.pm%3Areservacita</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

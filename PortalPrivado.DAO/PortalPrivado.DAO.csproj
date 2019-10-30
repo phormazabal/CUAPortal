@@ -99,6 +99,11 @@
       <DependentUpon>Reference.map</DependentUpon>
     </Compile>
     <Compile Include="MedicoDao.cs" />
+    <Compile Include="Web References\WsReserva\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
@@ -128,6 +133,17 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>PortalPrivado_DAO_WsGetBusqueda_Si_os_busquedaService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://dcpiddev.clinicauandes.cl:50000/dir/wsdl%3fp=sa/5a8a1e383b29389c8961660e9355f535">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WsReserva\</RelPath>
+      <UpdateFromURL>http://dcpiddev.clinicauandes.cl:50000/dir/wsdl%3fp=sa/5a8a1e383b29389c8961660e9355f535</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>PortalPrivado_DAO_WsReserva_SI_ReservaCita_osService</CachedSettingsPropName>
     </WebReferenceUrl>
     <WebReferenceUrl Include="http://dcpiddev.clinicauandes.cl:50000/dir/wsdl%3fp=sa/c41fd3bcd1f83d5bb07c49ce209c75f0">
       <UrlBehavior>Dynamic</UrlBehavior>
@@ -244,6 +260,14 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Web References\WsReserva\DT_r_ReservaCita.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\WsReserva\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WsReserva\SI_ReservaCita_os.wsdl" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

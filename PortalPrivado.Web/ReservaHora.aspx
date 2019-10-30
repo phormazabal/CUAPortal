@@ -40,11 +40,8 @@
     <div class="box-busqueda">
           <label>Ingrese la especialidad o nombre del profesional</label>
           <div class="w-form">
-          
-            
              <asp:DropDownList ID="dpBusqueda" CssClass="chosen-select" runat="server"></asp:DropDownList>
               <asp:Button ID="btnAceptar" CssClass="btn btn-amarillo" runat="server" Text="Buscar" OnClick="btnAceptar_Click" />  
-            
           </div>
         </div>
 </asp:Content>

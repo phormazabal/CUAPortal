@@ -12,7 +12,7 @@ namespace PortalPrivado.DAO.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.2.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.3.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -95,6 +95,18 @@ namespace PortalPrivado.DAO.Properties {
         public string PortalPrivado_DAO_WsDispMensual_SI_DispMensualxMedico_osService {
             get {
                 return ((string)(this["PortalPrivado_DAO_WsDispMensual_SI_DispMensualxMedico_osService"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://dcpiddev.clinicauandes.cl:50000/XISOAPAdapter/MessageServlet?senderParty=&" +
+            "senderService=BC_PORTAL_WEB_115&receiverParty=&receiverService=&interface=SI_Res" +
+            "ervaCita_os&interfaceNamespace=urn%3Aclinicauandes.org%3Aish.pm%3Areservacita")]
+        public string PortalPrivado_DAO_WsReserva_SI_ReservaCita_osService {
+            get {
+                return ((string)(this["PortalPrivado_DAO_WsReserva_SI_ReservaCita_osService"]));
             }
         }
     }

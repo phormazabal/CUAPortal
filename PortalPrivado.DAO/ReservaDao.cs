@@ -32,32 +32,33 @@ namespace PortalPrivado.DAO
             }
             return lst;
         }
-        //public List<Agenda> BuscarCita(String IdMedico,String IdEspecialidad)
-        //{
-        //    List<Agenda> busquedas = new List<Agenda>();
-        //    Config config = new Config();
-        //    WsBuscarCita.SI_BuscarCita_osService serv = new WsBuscarCita.SI_BuscarCita_osService();
-        //    WsBuscarCita.DT_BuscarCita dt = new WsBuscarCita.DT_BuscarCita();
-        //    WsBuscarCita.DT_r_BuscarCita dtr;
-           
-        //    //dt.BuscaOfertaGral.codesp = IdEspecialidad;
-        //    dt.BuscaOfertaGral.idmed = IdMedico;
-        //    serv.Credentials = new NetworkCredential(config.User, config.Pass);
-        //    dtr = serv.SI_BuscarCita_os(dt);
-        //    for (int i = 0; i < dtr.BuscaOfertaGral.Length; i++)
-        //    {
-        //        Agenda oAgenda = new Agenda();
-        //        oAgenda.Apepat = dtr.BuscaOfertaGral[i].apepat;
-        //        oAgenda.Apemat = dtr.BuscaOfertaGral[i].apemat;
-        //        oAgenda.Especialidad = dtr.BuscaOfertaGral[i].especialidad;
-        //        oAgenda.Fecha = dtr.BuscaOfertaGral[i].fecha;
-        //        oAgenda.Id_especialidad = dtr.BuscaOfertaGral[i].id_especialidad;
-        //        oAgenda.Id_medico = dtr.BuscaOfertaGral[i].Id_medico;
-        //        oAgenda.NombreMed = dtr.BuscaOfertaGral[i].nommed;
-        //        oAgenda.RutMed = dtr.BuscaOfertaGral[i].rutmed;
-        //        busquedas.Add(oAgenda);
-        //    }
-        //    return busquedas;
-        //}
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public List<String> reservar(Reserva reserva)
+        {
+            List<String> lts = new List<String>();
+            WsReserva.SI_ReservaCita_osService serv = new WsReserva.SI_ReservaCita_osService();
+            WsReserva.DT_ReservaCita dt = new WsReserva.DT_ReservaCita();
+            WsReserva.DT_r_ReservaCita dtr = new WsReserva.DT_r_ReservaCita();
+            dt.apepatpac = reserva.Apepatpac;
+            dt.codorigen = reserva.Codorigen;
+            dt.especialidad = reserva.Especialidad;
+            dt.fecreserva = reserva.Fecreserva;
+            dt.horareserva = reserva.Horareserva;
+            dt.mail = reserva.Mail;
+            dt.medico = reserva.Medico;
+            dt.nompac = reserva.Nompac;
+            dt.rutpac = reserva.Rutpac;
+            dt.rutsol = reserva.Rutsol;
+            dt.telefono = reserva.Telefono;
+            dt.utratamiento = reserva.Utratamiento;
+            dtr = serv.SI_ReservaCita_os(dt);
+            lts.Add(dtr.codreserva);
+            lts.Add(dtr.fechacita);
+            lts.Add(dtr.horacita);
+            return lts;
+        }
     }
 }
