@@ -162,6 +162,7 @@ $(document).ready(function(){
 
 
 $(document).ready(function() {
+  if($('.chosen-select').length) {
     $('.chosen-select').select2({
         "language": {
             "noResults": function(){
@@ -169,4 +170,14 @@ $(document).ready(function() {
             }
         }
     });
+  }
 });
+
+/*--CAMBIO MENU LATERAL MOBILE--*/
+$(document).ready(function(){
+  $('.btn-panel-usuario').click(function(){
+    $(this).toggleClass('open');
+    $('.home-priv .panel-usuario ul').toggleClass('visible');
+  });
+});
+/*--FIN CAMBIO MENU LATERAL MOBILE--*/

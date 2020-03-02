@@ -1,16 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/PortalM.Master" AutoEventWireup="true" CodeBehind="PerfilMedico.aspx.cs" Inherits="PortalPrivado.Web.PerfilMedico" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="contentPlaceHolder" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+     <div class="box-perfil" id="form-perfil">
     <div class="row">
           <div class="col-lg-12">
-            <%--<a href="#" class="volver"><img src="images/flecha-izq-verde.svg" alt=""> Volver</a>--%>
               <asp:LinkButton ID="LinkButton1" CssClass="volver"  runat="server" OnClick="LinkButton1_Click"><img src="images/flecha-izq-verde.svg" alt="">Volver</asp:LinkButton>
-             
+           
           </div>
           <div class="col-lg-12">
             <div class="b-doctor">
               <div class="titulo-doctor">
                 <img src="images/ic-doctor.svg" alt="">
-                <h2 class="t-2b">Nicolás Letelier Monckeber</h2>
+                <h2 class="t-2b">
+                    <asp:Label ID="lbNombre" runat="server" Text=""></asp:Label></h2>
               </div>
               <div class="ficha-doctor">
                 <div class="row">
@@ -35,8 +37,8 @@
               </div>
             </div>
             <div class="reserva-hora">
-              <p>Próxima hora disponible: <span>El  <asp:Label ID="lbFecha" runat="server" Text="Label"></asp:Label> - <asp:Label ID="lbHora" runat="server" Text="Label"></asp:Label> Hrs</span></p>
-              <a href="#" class="btn btn-amarillo">Reserva de hora</a>
+              <p>Próxima hora disponible: <span>El  <asp:Label ID="lbFecha" runat="server" Text="Label"></asp:Label> - <asp:Label ID="lbHora" runat="server" Text="Label"></asp:Label> Hrs</span></p>              
+                <asp:LinkButton ID="lkReservar" CssClass="btn btn-amarillo" runat="server" OnClick="lkReservar_Click">RESERVAR</asp:LinkButton>
             </div>
 
             <div class="titulo-doctor">
@@ -47,5 +49,6 @@
               <p><asp:Label ID="lbDetalle" runat="server" Text=""></asp:Label></p>
             </div>
           </div>
-        </div>
+        </div></div>
+    
 </asp:Content>

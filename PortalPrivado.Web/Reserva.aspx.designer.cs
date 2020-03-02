@@ -7,11 +7,13 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace PortalPrivado.Web {
-    
-    
-    public partial class Reserva {
-        
+namespace PortalPrivado.Web
+{
+
+
+    public partial class Reserva
+    {
+
         /// <summary>
         /// Control ScriptManager1.
         /// </summary>
@@ -20,32 +22,41 @@ namespace PortalPrivado.Web {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.ScriptManager ScriptManager1;
-        
+
         /// <summary>
-        /// Control UpdatePanel1.
+        /// Control lbMedico.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
-        
+        protected global::System.Web.UI.WebControls.Label lbMedico;
+
         /// <summary>
-        /// Control txtbus.
+        /// Control lbFecha.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtbus;
-        
+        protected global::System.Web.UI.WebControls.Label lbFecha;
+
         /// <summary>
-        /// Control AutoCompleteExtender1.
+        /// Control lbHora.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::AjaxControlToolkit.AutoCompleteExtender AutoCompleteExtender1;
+        protected global::System.Web.UI.WebControls.Label lbHora;
+
+        /// <summary>
+        /// Control lbEspecialidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbEspecialidad;
     }
 }
